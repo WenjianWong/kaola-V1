@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网易帐号中心</title>
+	<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+	<script type="text/javascript" src="../js/require.js" data-main="../js/register.js"></script>
+</head>
+<body>
+	<header class="logo">
+		<div class="title">
+			<a href="#" target="_blank">
+				<div class="l-logo bg"></div>
+			</a>
+			<div id="login">
+				已有帐号？去<a href="login.html" target="_blank">登录</a>
+			</div>
+		</div>
+	</header>
+
+	<div class="regarea">
+		<div class="forms">
+
+			<!-- 注册 -->
+			<div class="usr-account">
+				<label for="username" class="acc-lable">帐号：</label>
+				<input type="text" id="username" class="usrreg" placeholder="6-18位字母数字组合"></input>
+				<span class="wrongusr"></span>
+			</div>
+			<!-- 密码 -->
+			<div class="usr-account">
+				<label for="password" class="acc-lable">密码：</label>
+				<input type="password" id="password" class="usrreg" placeholder="6-18位密码，区分大小写"></input>
+				<span class="wrongpsw"></span>
+			</div>
+			<!-- 确认密码 -->
+			<div class="usr-account">
+				<label for="conPassword" class="acc-lable">确认密码：</label>
+				<input type="password" id="conPassword" class="usrreg" placeholder="再次输入密码"></input>
+				<span class="wrongconpsw"></span>
+			</div>
+			<!-- 手机号 -->
+			<div class="usr-account">
+				<label for="phonenum" class="acc-lable">手机号：</label>
+				<input type="text" id="phoneNum" class="usrreg" placeholder="11位手机号"></input>
+				<span class="wrongphone"></span>
+			</div>
+
+			<div class="regbtn">
+           		 <a href="#" id="registerBtn">注&nbsp;&nbsp;册</a>
+      	 	 </div>
+
+        </div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.footerlist{background: #fff;border-top:1px solid #eaeaea;}
+.footerlist .boxlist{width: 1196px;margin: 0 auto;}
+.boxlist .boxpromise{padding: 40px 0;border-bottom: 1px solid #eaeaea;}
+.boxpromise ul{overflow: hidden;}
+.boxpromise li{float: left;width: 25%;}
+.boxpromise li .iconfont{float: left;margin-right: 12px;width: 44px;height: 44px;display: inline-block;font-size: 42px;}
+.boxpromise li .tit{font-size: 18px;font-weight: bold;display: block;line-height: 22px;}
+.boxpromise li .desc{font-size: 14px;display: block;line-height: 22px;}
+.guidelist{padding: 40px 0 90px;overflow: hidden;}
+.guidelist .first{width: 194px;padding:0 40px 0 30px;}
+.guidelist .first .logokaola{display: block;width: 220px;height: 42px;line-height: 45px;margin-bottom: 20px;outline: none;cursor: pointer;background: url(../img/logo/logo-s.png) no-repeat;}
+.guidelist .lineus{height: 32px;}
+.guidelist .lineus .lable{vertical-align: middle;display: inline-block;}
+.guidelist .lineus .itm{position: relative;margin-left: 10px;cursor: pointer;display: inline-block;vertical-align: middle;}
+.guidelist .lineus .icon1{display:inline-block;width: 32px;height: 32px;background-position: -752px -69px;}
+.guidelist .lineus .icon2{display:inline-block;width: 32px;height: 32px;background-position: -796px -69px;}
+.guidelist .lineus .icon3{display:inline-block;width: 32px;height: 32px;background-position: -840px -69px;}
+.guidelist li{float: left;width: 110px;height: 128px;padding-left: 25px;border-left: 1px solid #eaeaea;}
+.guidelist li:nth-of-type(1),.guidelist li:nth-of-type(7),.guidelist li:nth-of-type(8){border-left: 0}
+.guidelist li dt{margin: -4px 0 10px;}
+.guidelist li dt em{font-size: 18px;font-weight: normal;font-style: normal;}
+.guidelist li dd{line-height: 24px;}
+.guidelist a{color: #333;}
+.guidelist .lastad{margin-left: 10px;width: 108px;padding: 0;text-align: center;float: left;}
+.guidelist .lastad img{margin-bottom: 6px;}
+.aboutus{position: relative;background: #333;line-height: 26px;text-align: center;padding:20px 0;}
+.aboutus {color: #c2c2c2;}
+.aboutus a{color: #c2c2c2;}
+.aboutus a:hover{text-decoration: underline;}
+.m-license{margin-left:20px;}
+.m-license img{margin-top:-2px;}
+.licensepic img{margin-top: 5px;border-radius: 5px;height: 30px;}
+.licensepic .licensepic2{height: 30px;margin: 5px 0 0 10px;}

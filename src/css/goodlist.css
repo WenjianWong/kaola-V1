@@ -1,0 +1,62 @@
+.searchcon{background: #f3f3f3;}
+.searchcon .container{overflow:hidden;width:1104px;margin:0 auto;text-align: left;font-size: 14px;min-height: 1000px;}
+.guides .location{margin: 15px 0 10px;line-height: 22px;}
+.guides .location p{float: left;line-height: 22px;font-size: 12px;margin-top: 2px;}
+.guides .location p a{color: #333;}
+.guides .location b{margin:0 6px 0 8px;display: inline-block;width: 10px;font-family: simsun;color: #999;font-weight: bold;}
+.guides .location .digital{color: #333;}
+.guides .location .detailsearch input{width:105px;padding:5px 24px 5px 5px;height: 12px;border:1px solid #ccc;margin-top: -1px;}
+.guides .location .goodsnum{height: 22px;display: inline-block;line-height: 24px;color: #999;font-size: 12px;}
+.guides .location .goodsnum i{color: #e31436;font-style: normal;}
+.opeartion{margin-bottom: 10px;background-color: #F8F8F8;border:1px solid #eaeaea;}
+.opeartion .brandbox{min-height:36px;border-bottom: 1px dotted #eaeaea;background-color: #F8F8F8}
+.opeartion .brandbox .name{font-size: 12px;line-height: 9px;padding-top:12px;width:85px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;float: left;min-height: 13px;padding-left:15px;color:#666;background-color: #f8f8f8;}
+.opeartion .brandbox .names{min-height: 36px;overflow: hidden;background: #fff;}
+.opeartion .brandbox .names a{margin-top:5px;position: relative;box-sizing:border-box;padding:3px 5px;width:120px;border:1px solid transparent;font-size: 12px;line-height: 12px;float: left;display: inline-block;color:#333;}
+.opeartion .brandbox .names a:hover{color:#E31436;}
+.goodslist{overflow: hidden;}
+/*goods item*/
+.goodsul{overflow: hidden;}
+.goodsli{float: left;height: 378px;width:262px;margin:0 7px 14px;background-color: #fff;font-size: 12px;}
+.goodswrap{background-color: #fff;border:1px solid #f3f3f3;}
+.goodswrap:hover {border-color: #E31416;height: auto;white-space: normal;}
+.goodswrap  .info{width:232px;padding:0 14px 11px;}
+.goodswrap .goodsimg a{display: block;}
+.goodswrap .goodsimg a img{display: block;width:232px;height: 232px;padding:15px 15px 10px;}
+.goodswrap .nowprice i{font-size: 12px;color:#E31436;font-weight: bold;}
+.goodswrap .nowprice .price{display: inline-block;margin-right: 2px;font-weight: bold;font-size: 22px;line-height: 24px;color:#E31436;position:relative;top:-1px;}
+.goodswrap .nowprice .discount{display: inline-block;border:1px dotted #E31436;font-size: 12px;color: #E31436;font-weight: bold;line-height: 18px;position: relative;top:-4px;}
+.goodswrap .oldprice{float: right;color: #999;line-height: 24px;}
+.goodswrap .oldprice i{color:#999;} 
+.goodswrap .goodsname {height: auto;min-height: 20px;white-space: normal;text-overflow: ellipsis;width: 234px;overflow: hidden;}
+.goodswrap .goodsname a{display: inline-block;height: 20px;width: 234px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;color: #333;}
+.goodswrap .goodsname a:hover{color:#E31416;text-decoration: underline;}
+.goodswrap .goodsname a.active{height: auto;min-height: 20px;white-space: normal;}
+.goodswrap .save{font-size: 13px;color:#E31416;line-height: 20px;}
+.goodswrap .commet{margin-top:5px;margin-bottom: 5px;}
+.goodswrap .commet span{display: inline-block;color:#333;font-weight: bold;}
+.goodswrap .commet b{float: right;color: #999;max-width: 110px;display: inline-block;}
+.goodswrap .distribution{color:#999;}
+/*页码*/
+.goodslist .goodspage{overflow: hidden;max-width:700px;margin:0 auto;text-align: center;padding-bottom: 30px;}
+.goodslist .goodspage .prev,.goodslist .goodspage .next{cursor:pointer;display: inline-block;width:58px;height: 28px;border:1px solid #e3e3e3;color:#333;text-align: center;line-height: 28px;margin-right: 5px;background-color: #fff;}
+.goodslist .goodspage .next{margin-left: 5px}
+.goodslist .goodspage .prev:hover,.goodslist .goodspage .next:hover{border-color: #E31416;color:#E31416;}
+.goodslist .goodspage .pageno a{display: inline-block;cursor: pointer;width:28px;height: 28px;text-align: center;line-height: 28px;border:1px solid #e3e3e3;color:#333;}
+.goodslist .goodspage .pageno a:hover{border-color: #E31416;color:#E31416;}
+.goodslist .goodspage a.active{background-color: #E31436;color: #fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

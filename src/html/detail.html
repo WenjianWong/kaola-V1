@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>详情页</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/detail.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/shopping car/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/buytip/iconfont.css"/>
+	<script type="text/javascript" src="../js/require.js" data-main="../js/detail.js"></script>
+</head>
+<body>
+	<!--描述：导航栏和LOGO/搜索栏-->
+		<nav id="topNav">
+			<div id="topNavWrap">
+				<div id="topNavLeft">
+					<span class="klwelcom">考拉欢迎你!</span>
+					<a href="html/login.html" class="login" target="_blank">登录</a>
+					<span class="sep">|</span>
+					<a href="html/register.html" target="_blank" class="register">免费注册</a>
+					<a href="#" target="_blank" id="exitlogin" style="display: none;">退出</a>
+				</div>
+				<div id="topNavLeft2">
+					<a href="#" class="app">
+						<i class="iconfont icon-mobile"></i>
+						手机考拉海购
+						<span class="appqrcode">
+							<img src="../img/qrcode/qrcode-navapp.jpg" width="116px" height="116px" alt="" />
+							<strong class="text">下载APP<br />领1000元新人礼包</strong>
+						</span>
+					</a>
+				</div>
+				<ul id="topNavRight">
+					
+					<li id="dailyAtte"><a href="#" class="toplevel"><i class="iconfont icon-flag icon-mobile"></i>每日签到</a><span class="sep">|</span></li>
+					
+					<li><a href="#" class="toplevel">我的订单</a><span class="sep">|</span></li>
+					
+					<li class="dropmenu preCenter">
+						<div class="dropMenuBox">
+							<a href="#" class="toplevel topNavHolder">个人中心</a>
+							<i class="arr"></i>	<!-- 倒三角-->     
+							<span class="sep">|</span>
+						</div>
+					</li>
+					
+					<li class="clientSevr">
+						<div class="dropMenuBox">
+							<a href="#" class="toplevel topNavHolder">客户服务</a>
+							<i class="arr"></i>	<!-- 倒三角-->    
+							<span class="sep">|</span>
+						</div>
+					</li>
+					
+					<li class="dropmenu charge">
+						<div class="dropMenuBox">
+							<a href="#" class="toplevel topNavHolder">充值中心</a>
+							<i class="arr"></i>	<!-- 倒三角-->   
+							<span class="sep">|</span>
+						</div>
+					</li>
+					
+					<li class="dropmenu clientNotice">
+						<div class="dropMenuBox">
+							<a href="#" class="toplevel">消费者告知书</a>
+							<span class="sep">|</span>
+						</div>
+					</li>
+					
+					<li class="dropmenu more">
+						<div class="dropMenuBox">
+							<a href="#" class="toplevel topNavHolder">更多</a>
+							<i class="arr"></i>	<!-- 倒三角-->   
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		
+		<header id="header" class="indexHeader">
+					<div id="docHeadWrap">
+						<a href="http://www.kaola.com/#" class="logokaola" title="网易考拉海购"></a>
+						<div class="searchbox searchbox1">
+							<div id="topsearchbox">
+								<div id="topsearch">
+									<div class="wrap">
+										<input type="text"  id="topSearchInput" placeholder="红豆薏米粉" />
+									</div>
+									<span id="topSearchBtn" class="mirror-1"></span>
+									<span class="mirror-2"></span>
+								</div>
+								<div class="searchresult"></div> 
+							</div>
+							<ul id="suggestlist">
+								<li class="suggestitem"><a href="#" target="_blank">面膜</a></li>
+								<li class="suggestitem"><span class="sep">|</span><a href="#" target="_blank">花王</a></li>
+								<li class="suggestitem"><span class="sep">|</span><a href="#" target="_blank">安耐晒</a></li>
+								<li class="suggestitem"><span class="sep">|</span><a href="#" target="_blank">Swisse</a></li>
+								<li class="suggestitem"><span class="sep">|</span><a href="#" target="_blank">小龙虾</a></li>
+								<li class="suggestitem"><span class="sep">|</span><a href="#" target="_blank">电动牙刷</a></li>
+								<li class="suggestitem"><span class="sep">|</span><a href="#" target="_blank">防晒喷雾</a></li>
+								<li class="suggestitem"><span class="sep">|</span><a href="#" target="_blank">驱蚊</a></li>
+							</ul>
+						</div>
+						<a href="#" target="_blank" class="shopingcar">
+							<i class="iconfont icon-gouwuche"></i>
+							<span class="wrap">购物车</span>
+						</a>
+					</div>
+		</header>
+		
+		<!-- 顶部固定搜索栏 -->
+		<header id="topFixNav" class="topFixHeader">
+			<div class="topFixSearch">
+				<div class="fixNavLogo">
+					<a href="http://www.kaola.com"><img src="../img/logo/fixlogo.png"></a>
+				</div>
+				<div id="topsearchbox1">
+					<div id="topsearch">
+						<div class="wrap">
+							<input type="text" id="topSearchInput" placeholder="红豆薏米粉">
+						</div>
+							<span id="topSearchBtn" class="mirror-1"></span>
+							<span class="mirror-2"></span>
+					</div>
+					<div class="searchresult"></div> 
+				</div>
+			</div>
+		</header>
+
+		<!--描述：分类栏  卡片选项卡-->
+		<nav id="topTabBox">
+			<div id="topTab">
+				<div id="topCats" class="navitm-cats">
+					<div class="toplevel">
+						<div class="lineicon"><i></i><i></i><i></i></div><span>所有分类</span>
+					</div>
+					<!--描述：分类菜单*10-->
+					<ul class="allproduct">
+						<li class="products">
+							<img class="icon" src="../img/productIcon/1.png"/>
+							<span class="t">母婴儿童</span>
+							<i class="iconfont icon-next"></i>
+							<em class="underline"></em>
+							<div class="m-ctgcard f-cb"> <!-- 卡片DIV  -->
+							  <div class="f-fl m-ctglist"> <!-- 文字列表框架DIV  -->
+							    <div class="m-ctgtbl">		<!-- 文字列表内DIV  -->
+							      <div class="f-cb">		<!-- 横排两块DIV  -->
+							        <div class="litd">		<!-- DIV  -->
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">奶粉</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">爱他美</a><a target="_blank" class="f-fcred3" href="#">牛栏</a><a target="_blank" class="f-fcred3" href="#">Hero Baby</a><a target="_blank" class="f-fcred3" href="#">喜宝</a><a target="_blank" class="f-fcred3" href="#">贝拉米</a><a target="_blank" class="f-fcred3" href="#">美素佳儿</a><a target="_blank" class="f-fcred0" href="#">美林</a><a target="_blank" class="f-fcred3" href="#">a2</a><a target="_blank" class="f-fcred0" href="#">惠氏</a><a target="_blank" class="f-fcred3" href="#">雅培</a><a target="_blank" class="f-fcred0" href="#">美赞臣</a><a target="_blank" class="f-fcred3" href="#">合生元</a><a target="_blank" class="f-fcred3" href="#">Pre段</a><a target="_blank" class="f-fcred3" href="#">1段</a><a target="_blank" class="f-fcred3" href="#">2段</a><a target="_blank" class="f-fcred0" href="#">3段</a><a target="_blank" class="f-fcred0" href="#">5段（2+）</a><a target="_blank" class="f-fcred0" href="#">4段（1+）</a><a target="_blank" class="f-fcred0" href="#">6段</a>
+							            </div>
+							          </div>
+							        </div>
+							        <div class="litd">		<!-- 单块文字DIV  -->
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">纸尿裤/拉拉裤</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">花王</a><a target="_blank" class="f-fcred3" href="#">尤妮佳</a><a target="_blank" class="f-fcred3" href="#">大王</a><a target="_blank" class="f-fcred3" href="#">好奇</a><a target="_blank" class="f-fcred0" href="#">妈咪宝贝</a><a target="_blank" class="f-fcred0" href="#">帮宝适</a><a target="_blank" class="f-fcred0" href="#">班博</a><a target="_blank" class="f-fcred0" href="#">丽贝乐</a><a target="_blank" class="f-fcred0" href="#">宝松怡</a><a target="_blank" class="f-fcred0" href="#">NB号</a><a target="_blank" class="f-fcred0" href="#">S号</a><a target="_blank" class="f-fcred0" href="#">M号</a><a target="_blank" class="f-fcred0" href="#">L号</a><a target="_blank" class="f-fcred0" href="#">XL号</a><a target="_blank" class="f-fcred0" href="#">XXL号</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							      </div>
+							      
+							      <div class="f-cb">	<!--营养副食 宝宝用品DIV-->
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">营养辅食</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">辅食泥 </a><a target="_blank" class="f-fcred3" href="#">米粉米糊</a><a target="_blank" class="f-fcred3" href="#">泡芙</a><a target="_blank" class="f-fcred0" href="#">溶溶豆</a><a target="_blank" class="f-fcred0" href="#">营养品</a><a target="_blank" class="f-fcred0" href="#">饼干</a><a target="_blank" class="f-fcred0" href="#">肉松面仔</a><a target="_blank" class="f-fcred0" href="#">调味品</a><a target="_blank" class="f-fcred0" href="#">其他辅食</a><a target="_blank" class="f-fcred0" href="#">其他零食</a>
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">宝宝用品</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">洗漱护肤</a><a target="_blank" class="f-fcred3" href="#">护理</a><a target="_blank" class="f-fcred3" href="#">喂养</a><a target="_blank" class="f-fcred0" href="#">出行</a><a target="_blank" class="f-fcred0" href="#">清洁消毒</a><a target="_blank" class="f-fcred0" href="#">文具图书</a><a target="_blank" class="f-fcred0" href="#">积木</a><a target="_blank" class="f-fcred0" href="#">益智玩具</a><a target="_blank" class="f-fcred0" href="#">其他玩具</a><a target="_blank" class="f-fcred0" href="#">宝宝家居</a><a target="_blank" class="f-fcred0" href="#">小家电</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">童装童鞋</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">童装</a><a target="_blank" class="f-fcred0" href="#">儿童配饰</a><a target="_blank" class="f-fcred3" href="#">童鞋</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">孕妈必备</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">营养</a><a target="_blank" class="f-fcred3" href="#">洗护</a><a target="_blank" class="f-fcred0" href="#">待产新生</a><a target="_blank" class="f-fcred0" href="#">穿戴</a><a target="_blank" class="f-fcred0" href="#">塑身</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							    </div>
+							    
+							  </div>
+							  <div class="f-fl m-brandbox">
+							    <div class="brandlist f-cb">
+							      <!--Regular list-->
+							        <a target="_blank" href="#">
+							          <img alt="Aptamil 爱他美(德国)" src="//haitao.nos.netease.com/ic8p1ibz13.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="pigeon 贝亲" src="//haitao.nosdn5.127.net/ig1o83dv34_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Merries 花王妙而舒" src="//haitao.nos.netease.com/j1ls2nr814_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="UNICO plus 维尼高布鲁斯" src="//haitao.nosdn4.127.net/ig1plpsc89_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="HAPPY BABY 禧贝" src="//haitao.nosdn3.127.net/iey2wlw933_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="BABY BANANA 香蕉宝宝" src="//haitao.nosdn2.127.net/iifru49i25_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="britax 宝得适" src="//haitao.nos.netease.com/ic736fqt39.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="KOBAYASHI 小林制药" src="//haitao.nos.netease.com/id0z24735.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="comotomo 可么多么" src="//haitao.nos.netease.com/ibu5ibg166.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="B&amp;B 保宁" src="//haitao.nosdn1.127.net/if3q7pu876_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="PALMER'S 帕玛氏" src="//haitao.nos.netease.com/icx9ju3818.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Gerber 嘉宝" src="//haitao.nos.netease.com/ibwaaevb49.jpg">
+							        </a>
+							      
+							      
+							    </div>
+							  </div>
+							  <div class="f-fr imgbox">
+							    <a target="_blank" href="#">
+							      <img class="u-img" src="//haitao.nos.netease.com/iqmf9m9p59_244_100.jpg">
+							    </a>
+							  </div>
+							</div>
+						</li>
+						<li class="products">
+							<img class="icon" src="../img/productIcon/2.png"/>
+							<span class="t">美容彩妆</span>
+							<i class="iconfont icon-next"></i>
+							<em class="underline"></em>
+							<div class="m-ctgcard f-cb">
+							  <div class="f-fl m-ctglist">
+							    <div class="m-ctgtbl">
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">护肤</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">洁面</a><a target="_blank" class="f-fcred0" href="#">卸妆</a><a target="_blank" class="f-fcred3" href="#">爽肤水</a><a target="_blank" class="f-fcred3" href="#">面霜</a><a target="_blank" class="f-fcred0" href="#">眼部护理</a><a target="_blank" class="f-fcred3" href="#">精华</a><a target="_blank" class="f-fcred3" href="#">乳液/凝胶</a><a target="_blank" class="f-fcred0" href="#">手/足护理</a><a target="_blank" class="f-fcred0" href="#">身体护理</a><a target="_blank" class="f-fcred0" href="#">唇部护理</a><a target="_blank" class="f-fcred3" href="#">护肤套装</a><a target="_blank" class="f-fcred3" href="#">男士面膜</a><a target="_blank" class="f-fcred0" href="#">精油芳疗</a><a target="_blank" class="f-fcred0" href="#">面部护肤</a><a target="_blank" class="f-fcred3" href="#">男士护肤</a>
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">面膜</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">可莱丝</a><a target="_blank" class="f-fcred0" href="#">森田药妆</a><a target="_blank" class="f-fcred3" href="#">Montagne jeunesse</a><a target="_blank" class="f-fcred0" href="#">丽得姿</a><a target="_blank" class="f-fcred0" href="#">SNP</a><a target="_blank" class="f-fcred0" href="#">Elizavecca</a><a target="_blank" class="f-fcred0" href="#">我的心机</a><a target="_blank" class="f-fcred3" href="#">自然晨露</a><a target="_blank" class="f-fcred0" href="#">THE BODY SHOP</a><a target="_blank" class="f-fcred0" href="#">我的美丽日记</a><a target="_blank" class="f-fcred0" href="#">BEYOND</a><a target="_blank" class="f-fcred0" href="#">其他面膜</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">彩妆</a></p>
+							            <div class="ctgnamebox">
+											<a target="_blank" class="f-fcred3" href="#">BB霜/CC霜</a><a target="_blank" class="f-fcred0" href="#">唇膏/唇彩</a><a target="_blank" class="f-fcred0" href="#">隔离/妆前</a><a target="_blank" class="f-fcred0" href="#">粉底</a><a target="_blank" class="f-fcred0" href="#">粉饼/散粉</a><a target="_blank" class="f-fcred3" href="#">美甲</a><a target="_blank" class="f-fcred3" href="#">眼线</a><a target="_blank" class="f-fcred0" href="#">眉笔</a><a target="_blank" class="f-fcred3" href="#">睫毛膏</a><a target="_blank" class="f-fcred0" href="#">眼影</a><a target="_blank" class="f-fcred0" href="#">腮红</a><a target="_blank" class="f-fcred0" href="#">遮瑕</a><a target="_blank" class="f-fcred0" href="#">高光/修颜</a><a target="_blank" class="f-fcred3" href="#">香水</a><a target="_blank" class="f-fcred0" href="#">化妆工具</a><a target="_blank" class="f-fcred0" href="#">彩妆工具</a>
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">防晒修复</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">水宝宝</a><a target="_blank" class="f-fcred0" href="#">露得清</a><a target="_blank" class="f-fcred0" href="#">近江兄弟</a><a target="_blank" class="f-fcred0" href="#">曼秀雷敦</a><a target="_blank" class="f-fcred0" href="#">碧柔</a><a target="_blank" class="f-fcred0" href="#">Ego</a><a target="_blank" class="f-fcred0" href="#">其他防晒</a>
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">香水/香氛</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">女士香水</a><a target="_blank" class="f-fcred0" href="#">男士香水</a><a target="_blank" class="f-fcred0" href="#">香水套装</a><a target="_blank" class="f-fcred0" href="#">Q版香水</a><a target="_blank" class="f-fcred0" href="#">中性香水</a><a target="_blank" class="f-fcred0" href="#">其他香水</a>
+							            </div>
+							          </div>
+							        </div>      
+							      </div>
+							    </div>
+							    
+							  </div>
+							  <div class="f-fl m-brandbox">
+							    <div class="brandlist f-cb">
+							        <a target="_blank" href="#">
+							          <img alt="SK-II" src="//haitao.nosdn1.127.net/ieft86iu85_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="ESTĒE LAUDER 雅诗兰黛" src="//haitao.nos.netease.com/idvqc2kv42.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="LANCÔME 兰蔻" src="//haitao.nos.netease.com/icc1uivj43.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Kiehl's 科颜氏" src="//haitao.nos.netease.com/ii71no6h49_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="CLINIQUE 倩碧" src="//haitao.nos.netease.com/idv0dp6a35.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="POLA 宝丽" src="//haitao.nosdn2.127.net/igats98t62_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="LA MER 海蓝之谜" src="//haitao.nosdn1.127.net/ieft6s0945_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="MEDIHEAL 美迪恵尔" src="//haitao.nosdn2.127.net/ijatm0c894_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Whoo 后" src="//haitao.nosdn5.127.net/ifxc1ubr35_120_120.jpg">
+							        </a>
+							    </div>
+							  </div>
+						  <div class="f-fr imgbox">
+						    <a target="_blank" href="#">
+						      <img class="u-img" src="//haitao.nosdn4.127.net/iqmf9t6y71_244_100.jpg">
+						    </a>
+						  </div>
+						</div>
+						</li>
+						<li class="products">
+							<img class="icon" src="../img/productIcon/3.png"/>
+							<span class="t">服饰鞋包</span>
+							<i class="iconfont icon-next"></i>
+							<em class="underline"></em>
+							<div class="m-ctgcard f-cb">
+							  <div class="f-fl m-ctglist">
+							    <!--Regular if20-->
+							    <div class="m-ctgtbl">
+							      <!--Regular list-->
+							      <div class="f-cb">
+							        <!--Regular list-->
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">精选大牌</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if21-->
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">MICHAEL KORS</a><a target="_blank" class="f-fcred0" href="#">COACH 蔻驰</a><a target="_blank" class="f-fcred0" href="#">SWAROVSKI</a><a target="_blank" class="f-fcred3" href="#">FURLA 芙拉</a><a target="_blank" class="f-fcred0" href="#">Kipling 凯浦林</a><a target="_blank" class="f-fcred0" href="#">Salvatore Ferragamo</a><a target="_blank" class="f-fcred0" href="#">LONGCHAMP 珑骧</a><a target="_blank" class="f-fcred0" href="#">BOTTEGA VENETA</a><a target="_blank" class="f-fcred3" href="#">Kate Spade</a><a target="_blank" class="f-fcred0" href="#">Rebecca Minkoff</a><a target="_blank" class="f-fcred0" href="#">土拨鼠</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">手表配饰</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if22-->
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">墨镜</a><a target="_blank" class="f-fcred0" href="#">眼镜</a><a target="_blank" class="f-fcred3" href="#">腰带</a><a target="_blank" class="f-fcred3" href="#">项链</a><a target="_blank" class="f-fcred0" href="#">手镯</a><a target="_blank" class="f-fcred0" href="#">大牌手表</a><a target="_blank" class="f-fcred0" href="#">流行饰品</a><a target="_blank" class="f-fcred0" href="#">围巾/丝巾</a><a target="_blank" class="f-fcred0" href="#">Zippo 打火机</a><a target="_blank" class="f-fcred3" href="#">Ray·Ban 雷朋</a><a target="_blank" class="f-fcred3" href="#">GENTLE MONSTER</a><a target="_blank" class="f-fcred0" href="#">KAREN WALKER</a><a target="_blank" class="f-fcred0" href="#">军刀</a><a target="_blank" class="f-fcred0" href="#">其他配件</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <!--Regular list-->
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">女士箱包</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if23-->
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">斜挎包</a><a target="_blank" class="f-fcred0" href="#">手提包</a><a target="_blank" class="f-fcred0" href="#">手拿包</a><a target="_blank" class="f-fcred0" href="#">双肩包</a><a target="_blank" class="f-fcred0" href="#">化妆包</a><a target="_blank" class="f-fcred0" href="#">钱包/卡包</a><a target="_blank" class="f-fcred0" href="#">附件包</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">服饰内衣</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if24-->
+							              <!--Regular list--><a target="_blank" class="f-fcred0" href="#">男装</a><a target="_blank" class="f-fcred0" href="#">女装</a><a target="_blank" class="f-fcred0" href="#">丝袜</a><a target="_blank" class="f-fcred3" href="#">Calvin Klein 卡文克莱</a><a target="_blank" class="f-fcred0" href="#">睡衣/家居服套装</a><a target="_blank" class="f-fcred3" href="#">内衣</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <!--Regular list-->
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">男士箱包</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if25-->
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">斜挎包</a><a target="_blank" class="f-fcred0" href="#">手拿包</a><a target="_blank" class="f-fcred0" href="#">双肩包</a><a target="_blank" class="f-fcred0" href="#">商务包</a><a target="_blank" class="f-fcred0" href="#">钱包/卡包</a><a target="_blank" class="f-fcred3" href="#">网易考拉拉杆箱</a><a target="_blank" class="f-fcred3" href="#">手提包</a><a target="_blank" class="f-fcred3" href="#">旅行包</a><a target="_blank" class="f-fcred3" href="#">腰包\胸包</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">鞋</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if26-->
+							              <!--Regular list--><a target="_blank" class="f-fcred0" href="#">女鞋</a><a target="_blank" class="f-fcred0" href="#">男鞋</a><a target="_blank" class="f-fcred0" href="#">户外鞋</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							    </div>
+							    
+							  </div>
+							  <div class="f-fl m-brandbox">
+							    <div class="brandlist f-cb">
+							      <!--Regular if27-->
+							      <!--Regular list-->
+							        <a target="_blank" href="#">
+							          <img alt="MICHAEL KORS 迈克高仕" src="//haitao.nos.netease.com/id2q3etz98.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="COACH 蔻驰" src="//haitao.nos.netease.com/id1tosf320.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="FURLA 芙拉" src="//haitao.nos.netease.com/id2fm4ms50.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="BURBERRY 博柏利" src="//haitao.nosdn2.127.net/ii8tv4yk15_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Salvatore Ferragamo 菲拉格慕" src="//haitao.nos.netease.com/id2pp8658.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="BOTTEGA VENETA 葆蝶家" src="//haitao.nos.netease.com/ibxec5al87.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Kipling 凯浦林" src="//haitao.nos.netease.com/id5kjrfg80.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="SOPHIE HULME 索菲·休姆" src="//haitao.nosdn1.127.net/ifyzegfa15_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="SAINT LAURENT PARIS 圣罗兰" src="//haitao.nos.netease.com/idj01llj78.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="SWAROVSKI 施华洛世奇" src="//haitao.nos.netease.com/idihqwbw73.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Ray·Ban 雷朋" src="//haitao.nos.netease.com/id2t0m5w48.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="asics 亚瑟士" src="//haitao.nosdn4.127.net/igbm30kg53_120_120.jpg">
+							        </a>
+							      
+							      
+							    </div>
+							  </div>
+							  <div class="f-fr imgbox">
+							    <a target="_blank" href="#">
+							      <img class="u-img" src="//haitao.nos.netease.com/iqmfbh3y97_244_100.jpg">
+							    </a>
+							  </div>
+							</div>
+						</li>
+						<li class="products">
+							<img class="icon" src="../img/productIcon/4.png"/>
+							<span class="t">家居个护</span>
+							<i class="iconfont icon-next"></i>
+							<em class="underline"></em>
+							<div class="m-ctgcard f-cb">
+							  <div class="f-fl m-ctglist">
+							    <div class="m-ctgtbl">
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">洗护日用</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">洗发水</a><a target="_blank" class="f-fcred0" href="#">护发素</a><a target="_blank" class="f-fcred0" href="#">发膜</a><a target="_blank" class="f-fcred0" href="#">染发剂</a><a target="_blank" class="f-fcred0" href="#">护发精油</a><a target="_blank" class="f-fcred0" href="#">梳子</a><a target="_blank" class="f-fcred3" href="#">沐浴露</a><a target="_blank" class="f-fcred0" href="#">沐浴皂</a><a target="_blank" class="f-fcred0" href="#">洗手液</a><a target="_blank" class="f-fcred3" href="#">牙膏</a><a target="_blank" class="f-fcred0" href="#">牙刷</a><a target="_blank" class="f-fcred3" href="#">漱口水</a><a target="_blank" class="f-fcred0" href="#">牙线</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">女性护理</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">卫生巾</a><a target="_blank" class="f-fcred0" href="#">护垫</a><a target="_blank" class="f-fcred0" href="#">卫生棉条</a><a target="_blank" class="f-fcred0" href="#">私处洗液</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">其他个护</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">眼罩</a><a target="_blank" class="f-fcred3" href="#">口罩</a><a target="_blank" class="f-fcred0" href="#">其他个护</a><a target="_blank" class="f-fcred3" href="#">避孕套</a><a target="_blank" class="f-fcred0" href="#">人体润滑</a><a target="_blank" class="f-fcred0" href="#">男用器具</a><a target="_blank" class="f-fcred0" href="#">女用器具</a><a target="_blank" class="f-fcred0" href="#">情趣玩具</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">宠物生活</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">宠物主粮</a><a target="_blank" class="f-fcred0" href="#">宠物零食</a><a target="_blank" class="f-fcred0" href="#">宠物洗护美容</a><a target="_blank" class="f-fcred0" href="#">宠物玩具</a><a target="_blank" class="f-fcred0" href="#">宠物医疗保健</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">居家用品</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">杯子</a><a target="_blank" class="f-fcred3" href="#">滤水壶/滤芯</a><a target="_blank" class="f-fcred3" href="#">锅具刀具</a><a target="_blank" class="f-fcred0" href="#">厨房餐饮</a><a target="_blank" class="f-fcred3" href="#">纸品</a><a target="_blank" class="f-fcred3" href="#">衣物清洁</a><a target="_blank" class="f-fcred0" href="#">驱虫除臭</a><a target="_blank" class="f-fcred0" href="#">家居清洁</a><a target="_blank" class="f-fcred0" href="#">收纳整理</a><a target="_blank" class="f-fcred0" href="#">创意礼品</a><a target="_blank" class="f-fcred0" href="#">宠物生活</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">家装家纺</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">枕头</a><a target="_blank" class="f-fcred0" href="#">床上用品</a><a target="_blank" class="f-fcred3" href="#">毛巾浴巾</a><a target="_blank" class="f-fcred0" href="#">浴袍</a><a target="_blank" class="f-fcred0" href="#">其他家纺用品</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							    </div>
+							    
+							  </div>
+							  <div class="f-fl m-brandbox">
+							    <div class="brandlist f-cb">
+							        <a target="_blank" href="#">
+							          <img alt="Ryoe 吕" src="//haitao.nosdn2.127.net/ii7d68gy0_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Propolinse 比那氏" src="//haitao.nos.netease.com/idiu9l0f64.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Lauríer 乐而雅" src="//haitao.nos.netease.com/ibvxgs0q49.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="LION 狮王" src="//haitao.nos.netease.com/ic8njbdh62.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="NITORI 尼达利" src="//haitao.nosdn4.127.net/ijtp33as56_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="BRITA 碧然德" src="//haitao.nos.netease.com/id1tm35y19.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Latex Systems" src="//haitao.nos.netease.com/ifhm2g6290_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="THERMOS 膳魔师" src="//haitao.nosdn3.127.net/ig1oirv958_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="THE LAUNDRESS" src="//haitao.nos.netease.com/idiwjmb244.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="LG生活健康" src="//haitao.nosdn4.127.net/ii7d4i8i89_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Kao 花王" src="//haitao.nos.netease.com/1bi5rifam58_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="TANGLE TEEZER" src="//haitao.nos.netease.com/id5bvazw33.jpg">
+							        </a>
+							      
+							      
+							    </div>
+							  </div>
+							  <div class="f-fr imgbox">
+							    <a target="_blank" href="#">
+							      <img class="u-img" src="//haitao.nosdn3.127.net/iqmfabac12_244_100.jpg">
+							    </a>
+							  </div>
+							</div>
+						</li>
+						<li class="products">
+							<img class="icon" src="../img/productIcon/5.png"/>
+							<span class="t">营养保健</span>
+							<i class="iconfont icon-next"></i>
+							<em class="underline"></em>
+							<div class="m-ctgcard f-cb">
+							  <div class="f-fl m-ctglist">
+							    <div class="m-ctgtbl">
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">营养补充</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred0" href="#">维生素</a><a target="_blank" class="f-fcred3" href="#">鱼油</a><a target="_blank" class="f-fcred3" href="#">酵素</a><a target="_blank" class="f-fcred0" href="#">蛋白粉</a><a target="_blank" class="f-fcred3" href="#">葡萄籽</a><a target="_blank" class="f-fcred3" href="#">蔓越莓</a><a target="_blank" class="f-fcred0" href="#">叶酸</a><a target="_blank" class="f-fcred0" href="#">蜂蜜/蜂胶</a><a target="_blank" class="f-fcred3" href="#">铁</a><a target="_blank" class="f-fcred3" href="#">钙</a><a target="_blank" class="f-fcred0" href="#">蛋白质/氨基酸</a><a target="_blank" class="f-fcred0" href="#">大豆异黄酮 </a><a target="_blank" class="f-fcred0" href="#">大蒜提取物  </a><a target="_blank" class="f-fcred3" href="#">胶原蛋白</a><a target="_blank" class="f-fcred0" href="#">参类</a><a target="_blank" class="f-fcred0" href="#">蜂蜜</a><a target="_blank" class="f-fcred3" href="#">奶蓟草</a><a target="_blank" class="f-fcred0" href="#">月见草</a><a target="_blank" class="f-fcred0" href="#">番茄红素</a><a target="_blank" class="f-fcred0" href="#">芦荟</a><a target="_blank" class="f-fcred0" href="#">卵磷脂</a><a target="_blank" class="f-fcred3" href="#">银杏</a><a target="_blank" class="f-fcred0" href="#"> 叶黄/蓝莓</a><a target="_blank" class="f-fcred3" href="#">DHA</a><a target="_blank" class="f-fcred3" href="#">维骨力</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">健康养护</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">男性功能</a><a target="_blank" class="f-fcred0" href="#">美容养颜</a><a target="_blank" class="f-fcred3" href="#">调节三高</a><a target="_blank" class="f-fcred0" href="#">关节养护</a><a target="_blank" class="f-fcred3" href="#">肝肾养护</a><a target="_blank" class="f-fcred3" href="#">减肥瘦身</a><a target="_blank" class="f-fcred0" href="#">调节免疫</a><a target="_blank" class="f-fcred3" href="#">心脑保健</a><a target="_blank" class="f-fcred0" href="#">滋补养生</a><a target="_blank" class="f-fcred3" href="#">骨骼健康</a><a target="_blank" class="f-fcred0" href="#">保护视力</a><a target="_blank" class="f-fcred3" href="#">改善睡眠</a><a target="_blank" class="f-fcred0" href="#">改善贫血</a><a target="_blank" class="f-fcred0" href="#">护发养发</a>
+							              
+							            <a target="_blank" class="f-fcred0" href="#">药品资讯</a></div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">女性必备</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">减肥瘦身</a><a target="_blank" class="f-fcred0" href="#">舒缓岁月</a><a target="_blank" class="f-fcred3" href="#">胶原蛋白</a><a target="_blank" class="f-fcred0" href="#">内分泌</a><a target="_blank" class="f-fcred3" href="#">酵素</a><a target="_blank" class="f-fcred3" href="#">补气养血</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">关爱老年</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">滋补养生</a><a target="_blank" class="f-fcred0" href="#">心脑保健</a><a target="_blank" class="f-fcred3" href="#">调节三高</a><a target="_blank" class="f-fcred0" href="#">调节免疫</a><a target="_blank" class="f-fcred0" href="#">肝肾养护</a><a target="_blank" class="f-fcred3" href="#">骨骼关节</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">男性必备</a></p>
+							            <div class="ctgnamebox">
+							             <a target="_blank" class="f-fcred3" href="#">护肝</a><a target="_blank" class="f-fcred0" href="#">补钙</a><a target="_blank" class="f-fcred0" href="#">肾、腺</a><a target="_blank" class="f-fcred3" href="#">玛卡</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">国际汇</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">澳新</a><a target="_blank" class="f-fcred0" href="#">韩国</a><a target="_blank" class="f-fcred3" href="#">德国</a><a target="_blank" class="f-fcred0" href="#">日本</a><a target="_blank" class="f-fcred0" href="#">美国</a>
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							    </div>
+							    
+							  </div>
+							  <div class="f-fl m-brandbox">
+							    <div class="brandlist f-cb">
+							        <a target="_blank" href="#">
+							          <img alt="胡庆余堂" src="//haitao.nos.netease.com/iv34u7fo0_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="KGC 正官庄" src="//haitao.nosdn4.127.net/is8vmw6345_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Healthy Care" src="//haitao.nos.netease.com/id59v9wn8.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="BLACKMORES 澳佳宝" src="//haitao.nos.netease.com/ibosr6bx67.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Schiff" src="//haitao.nosdn3.127.net/ii7ckoej83_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Salus 莎露斯" src="//haitao.nosdn4.127.net/ifzfvi7613_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Doppelherz 双心" src="//haitao.nosdn1.127.net/ij5fy4ne53_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="GNC 健安喜" src="//haitao.nos.netease.com/id192jwd83.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Centrum 善存" src="//haitao.nosdn3.127.net/ii7faa9k34_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Nature Made 莱萃美" src="//haitao.nosdn3.127.net/ii7ckcdg28_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="NATURE'S BOUNTY 自然之宝" src="//haitao.nos.netease.com/id17vsal81.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="COMVITA 康维他" src="//haitao.nos.netease.com/ibr6dnx288.jpg">
+							        </a>
+							      
+							      
+							    </div>
+							  </div>
+							  <div class="f-fr imgbox">
+							    <a target="_blank" href="#">
+							      <img class="u-img" src="//haitao.nosdn4.127.net/iqrh4xrm15_244_100.jpg">
+							    </a>
+							  </div>
+							</div>
+						</li>
+						<li class="products">
+							<img class="icon" src="../img/productIcon/6.png"/>
+							<span class="t">海外直邮</span>
+							<i class="iconfont icon-next"></i>
+							<em class="underline"></em>
+							<div class="m-ctgcard f-cb">
+							  <div class="f-fl m-ctglist">
+							    <div class="m-ctgtbl">
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">母婴专区</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">婴儿奶粉</a><a target="_blank" class="f-fcred3" href="#">美德乐吸奶器</a><a target="_blank" class="f-fcred0" href="#">宝宝用品</a><a target="_blank" class="f-fcred0" href="#">玩具总动员</a><a target="_blank" class="f-fcred0" href="#">小黄人玩具</a><a target="_blank" class="f-fcred3" href="#"> LEGO 乐高</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">美容彩妆</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred0" href="#">春雨</a><a target="_blank" class="f-fcred0" href="#">水光面膜</a><a target="_blank" class="f-fcred0" href="#">FOREO洁面仪</a><a target="_blank" class="f-fcred0" href="#">护肤</a><a target="_blank" class="f-fcred0" href="#">面部清洁</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">电子生活</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">beats by dr. dre</a><a target="_blank" class="f-fcred3" href="#">SENNHEISER 森海塞尔</a><a target="_blank" class="f-fcred0" href="#">鼠标</a><a target="_blank" class="f-fcred0" href="#">音箱</a><a target="_blank" class="f-fcred0" href="#">耳麦</a><a target="_blank" class="f-fcred0" href="#">影音娱乐</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">日用家居</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">PHILIPS 飞利浦</a><a target="_blank" class="f-fcred0" href="#">电动牙刷</a><a target="_blank" class="f-fcred0" href="#">剃须刀</a><a target="_blank" class="f-fcred0" href="#">料理机</a><a target="_blank" class="f-fcred0" href="#">家居用品</a><a target="_blank" class="f-fcred0" href="#">戴森</a><a target="_blank" class="f-fcred0" href="#">宠物用品</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">服饰鞋包</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">Daniel Wellington</a><a target="_blank" class="f-fcred0" href="#">Calvin Klein</a><a target="_blank" class="f-fcred0" href="#">Zippo 打火机</a><a target="_blank" class="f-fcred3" href="#">Pandora 潘多拉</a><a target="_blank" class="f-fcred3" href="#">CITIZEN 西铁城</a><a target="_blank" class="f-fcred3" href="#">YSL</a><a target="_blank" class="f-fcred0" href="#">运动鞋</a><a target="_blank" class="f-fcred0" href="#">服装</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">美食保健</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred0" href="#">减肥瘦身</a><a target="_blank" class="f-fcred0" href="#">其他保健</a><a target="_blank" class="f-fcred0" href="#">进口零食</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							    </div>
+							    
+							  </div>
+							  <div class="f-fl m-brandbox">
+							    <div class="brandlist f-cb">
+							        <a target="_blank" href="#">
+							          <img alt="Daniel Wellington" src="//haitao.nos.netease.com/id2s1syx28.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="PANDORA 潘多拉" src="//haitao.nosdn1.127.net/ij3oxyva36_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="medela 美德乐" src="//haitao.nos.netease.com/idk0cso698.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="PHILIPS 飞利浦" src="//haitao.nos.netease.com/icc0dxd356.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="CITIZEN 西铁城" src="//haitao.nos.netease.com/id2t3q0y45.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="FOREO 斐珞尔" src="//haitao.nosdn2.127.net/ilvpj0do8_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="beats by dr. dre" src="//haitao.nos.netease.com/ibvy7zrc31.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="BRAUN 博朗" src="//haitao.nos.netease.com/id2g028o49.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="BOSE" src="//haitao.nos.netease.com/ibosun6p96.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="SEIKO 精工" src="//haitao.nos.netease.com/id5cem7x0.jpg">
+							        </a>
+							      
+							      
+							    </div>
+							  </div>
+							  <div class="f-fr imgbox">
+							    <a target="_blank" href="#">
+							      <img class="u-img" src="//haitao.nos.netease.com/iqmfbwzx1_244_100.jpg">
+							    </a>
+							  </div>
+							</div>
+						</li>
+						<li class="products">
+							<img class="icon" src="../img/productIcon/7.png"/>
+							<span class="t">数码家电</span>
+							<i class="iconfont icon-next"></i>
+							<em class="underline"></em>
+							<div class="m-ctgcard f-cb">
+							  <div class="f-fl m-ctglist">
+							    <div class="m-ctgtbl">
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">手机/配件</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">苹果</a><a target="_blank" class="f-fcred3" href="#">华为</a><a target="_blank" class="f-fcred3" href="#">OPPO</a><a target="_blank" class="f-fcred0" href="#">三星</a><a target="_blank" class="f-fcred0" href="#">数据线</a><a target="_blank" class="f-fcred0" href="#">手机壳</a><a target="_blank" class="f-fcred0" href="#">手机贴膜</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">数码影音</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">数码相机</a><a target="_blank" class="f-fcred3" href="#">耳机/耳麦</a><a target="_blank" class="f-fcred0" href="#">音箱/音响</a><a target="_blank" class="f-fcred3" href="#">单反相机</a><a target="_blank" class="f-fcred0" href="#">微单</a><a target="_blank" class="f-fcred0" href="#">拍立得</a><a target="_blank" class="f-fcred3" href="#">平板/游戏机</a><a target="_blank" class="f-fcred0" href="#">智能穿戴</a><a target="_blank" class="f-fcred3" href="#">电脑/电脑周边</a><a target="_blank" class="f-fcred0" href="#">其他配件</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">生活电器</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred0" href="#">电风扇</a><a target="_blank" class="f-fcred0" href="#">除湿机</a><a target="_blank" class="f-fcred3" href="#">净化器/氧吧</a><a target="_blank" class="f-fcred3" href="#">扫地机器人</a><a target="_blank" class="f-fcred0" href="#">吸尘器/除螨</a><a target="_blank" class="f-fcred0" href="#">加湿器</a><a target="_blank" class="f-fcred0" href="#">挂烫机/电熨斗</a><a target="_blank" class="f-fcred0" href="#">洗衣机</a><a target="_blank" class="f-fcred0" href="#">其他生活电器</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">个护健康</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">电吹风/风筒</a><a target="_blank" class="f-fcred3" href="#">电动牙刷</a><a target="_blank" class="f-fcred3" href="#">剃须刀</a><a target="_blank" class="f-fcred0" href="#">卷/直发器</a><a target="_blank" class="f-fcred0" href="#">剃/脱毛器</a><a target="_blank" class="f-fcred0" href="#">鼻毛修剪器</a><a target="_blank" class="f-fcred0" href="#">理发器</a><a target="_blank" class="f-fcred0" href="#">按摩梳</a><a target="_blank" class="f-fcred0" href="#">其他个护电器</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">厨房电器</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">电水壶/热水瓶</a><a target="_blank" class="f-fcred3" href="#">咖啡机/咖啡壶</a><a target="_blank" class="f-fcred0" href="#">原汁机/榨汁机</a><a target="_blank" class="f-fcred3" href="#">电饭煲</a><a target="_blank" class="f-fcred0" href="#">搅拌/料理机</a><a target="_blank" class="f-fcred0" href="#">面包机</a><a target="_blank" class="f-fcred3" href="#">豆浆机</a><a target="_blank" class="f-fcred0" href="#">净水器</a><a target="_blank" class="f-fcred0" href="#">其他厨房电器</a><a target="_blank" class="f-fcred0" href="#">电压力锅</a><a target="_blank" class="f-fcred0" href="#">烤箱</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">办公/外设</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">凌美</a><a target="_blank" class="f-fcred3" href="#">kindle</a><a target="_blank" class="f-fcred0" href="#">派克</a><a target="_blank" class="f-fcred3" href="#">笔类</a><a target="_blank" class="f-fcred0" href="#">电子书</a><a target="_blank" class="f-fcred0" href="#">办公文具</a><a target="_blank" class="f-fcred0" href="#">纸本</a><a target="_blank" class="f-fcred3" href="#">照片打印机</a><a target="_blank" class="f-fcred0" href="#">相片纸</a><a target="_blank" class="f-fcred0" href="#">鼠标/键盘</a><a target="_blank" class="f-fcred0" href="#">投影机</a><a target="_blank" class="f-fcred0" href="#">移动存储</a><a target="_blank" class="f-fcred0" href="#">摄像头</a><a target="_blank" class="f-fcred0" href="#">游戏周边.</a><a target="_blank" class="f-fcred0" href="#">其他办公设备</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							    </div>
+							    
+							  </div>
+							  <div class="f-fl m-brandbox">
+							    <div class="brandlist f-cb">
+							        <a target="_blank" href="#">
+							          <img alt="PHILIPS 飞利浦" src="//haitao.nos.netease.com/icc0dxd356.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Apple 苹果" src="//haitao.nos.netease.com/iey7c9oc31_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="LAMY 凌美" src="//haitao.nosdn3.127.net/ii75na3t23_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Hurom 惠人" src="//haitao.nos.netease.com/idiy73qo97.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="iRobot" src="//haitao.nos.netease.com/icc297zq45.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="OPPO" src="//haitao.nos.netease.com/j0z2hdil99_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="beats by dr. dre" src="//haitao.nos.netease.com/ibvy7zrc31.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="dyson 戴森" src="//haitao.nos.netease.com/idk08yv746.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="BRAUN 博朗" src="//haitao.nos.netease.com/id2g028o49.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Canon 佳能" src="//haitao.nos.netease.com/iceehxom39.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="amazon kindle" src="//haitao.nosdn3.127.net/imeutztb42_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Panasonic 松下" src="//haitao.nos.netease.com/id5oa5iu21.jpg">
+							        </a>
+							      
+							      
+							    </div>
+							  </div>
+							  <div class="f-fr imgbox">
+							    <a target="_blank" href="#">
+							      <img class="u-img" src="//haitao.nos.netease.com/iqmfbnlc90_244_100.jpg">
+							    </a>
+							  </div>
+							</div>
+						</li>
+						<li class="products">
+							<img class="icon" src="../img/productIcon/8.png"/>
+							<span class="t">环球美食</span>
+							<i class="iconfont icon-next"></i>
+							<em class="underline"></em>
+							<div class="m-ctgcard f-cb">
+							  <div class="f-fl m-ctglist">
+							    <!--Regular if60-->
+							    <div class="m-ctgtbl">
+							      <!--Regular list-->
+							      <div class="f-cb">
+							        <!--Regular list-->
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">乳品/咖啡/麦片/冲饮</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if61-->
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">成人奶粉</a><a target="_blank" class="f-fcred0" href="#">奶片</a><a target="_blank" class="f-fcred3" href="#">进口牛奶</a><a target="_blank" class="f-fcred0" href="#">酸奶</a><a target="_blank" class="f-fcred3" href="#">麦片</a><a target="_blank" class="f-fcred0" href="#">五谷冲饮</a><a target="_blank" class="f-fcred0" href="#">热可可</a><a target="_blank" class="f-fcred0" href="#">其他冲饮</a><a target="_blank" class="f-fcred3" href="#">速溶咖啡</a><a target="_blank" class="f-fcred0" href="#">咖啡粉</a><a target="_blank" class="f-fcred0" href="#">咖啡豆</a><a target="_blank" class="f-fcred0" href="#">胶囊咖啡</a><a target="_blank" class="f-fcred0" href="#">咖啡伴侣</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">人气热门</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if62-->
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">德运</a><a target="_blank" class="f-fcred0" href="#">丸太拉面</a><a target="_blank" class="f-fcred3" href="#">UCC咖啡</a><a target="_blank" class="f-fcred0" href="#">轩尼诗</a><a target="_blank" class="f-fcred0" href="#">成人奶粉</a><a target="_blank" class="f-fcred0" href="#">可乐</a><a target="_blank" class="f-fcred3" href="#">早餐麦片</a><a target="_blank" class="f-fcred3" href="#">歌帝梵</a><a target="_blank" class="f-fcred3" href="#">卡乐比</a><a target="_blank" class="f-fcred0" href="#">巴黎水</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <!--Regular list-->
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">茶/酒/饮料</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if63-->
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">葡萄酒</a><a target="_blank" class="f-fcred0" href="#">洋酒</a><a target="_blank" class="f-fcred0" href="#">白酒</a><a target="_blank" class="f-fcred3" href="#">啤酒</a><a target="_blank" class="f-fcred0" href="#">黄酒</a><a target="_blank" class="f-fcred3" href="#">品质水饮</a><a target="_blank" class="f-fcred0" href="#">饮料</a><a target="_blank" class="f-fcred3" href="#">碳酸饮料</a><a target="_blank" class="f-fcred0" href="#">果蔬汁</a><a target="_blank" class="f-fcred3" href="#">花草茶</a><a target="_blank" class="f-fcred0" href="#">茶饮</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">粮油副食</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if64-->
+							              <!--Regular list--><a target="_blank" class="f-fcred0" href="#">调味品/料理</a><a target="_blank" class="f-fcred0" href="#">果酱/酱料</a><a target="_blank" class="f-fcred3" href="#">食用油/橄榄油</a><a target="_blank" class="f-fcred3" href="#">泡面</a><a target="_blank" class="f-fcred0" href="#">方便速食</a><a target="_blank" class="f-fcred0" href="#">方便菜</a><a target="_blank" class="f-fcred3" href="#">米面杂粮</a><a target="_blank" class="f-fcred3" href="#">南北干货</a><a target="_blank" class="f-fcred3" href="#">端午粽子</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <!--Regular list-->
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">休闲零食</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if65-->
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">坚果</a><a target="_blank" class="f-fcred0" href="#">蜜饯果干</a><a target="_blank" class="f-fcred0" href="#">糖果巧克力</a><a target="_blank" class="f-fcred0" href="#">口香糖</a><a target="_blank" class="f-fcred3" href="#">薯片/膨化</a><a target="_blank" class="f-fcred0" href="#">海产品</a><a target="_blank" class="f-fcred0" href="#">果冻布丁</a><a target="_blank" class="f-fcred3" href="#">肉脯干</a><a target="_blank" class="f-fcred0" href="#">其他零食</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">饼干糕点</a></p>
+							            <div class="ctgnamebox">
+							              <!--Regular if66-->
+							              <!--Regular list--><a target="_blank" class="f-fcred3" href="#">饼干</a><a target="_blank" class="f-fcred0" href="#">糕点</a><a target="_blank" class="f-fcred0" href="#">点心</a><a target="_blank" class="f-fcred0" href="#">莱家威化</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							    </div>
+							    
+							  </div>
+							  <div class="f-fl m-brandbox">
+							    <div class="brandlist f-cb">
+							      <!--Regular if67-->
+							      <!--Regular list-->
+							        <a target="_blank" href="#">
+							          <img alt="DEVONDALE 德运" src="//haitao.nosdn2.127.net/ii741aro99_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="ucc 悠诗诗" src="//haitao.nosdn3.127.net/ii71r07a69_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="GILIM" src="//haitao.nos.netease.com/ik69djvv98_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="马玉山" src="//haitao.nosdn4.127.net/ii71rilz17_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="illy 意利" src="//haitao.nos.netease.com/id1sb1iq81.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="OWL 猫头鹰" src="//haitao.nos.netease.com/iiflp05q79_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="JIUR 九日" src="//haitao.nos.netease.com/idiymrcy0.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Coca-Cola 可口可乐" src="//haitao.nosdn4.127.net/igbparbr60_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="MARUTAI 丸太" src="//haitao.nos.netease.com/iebfrdvs4.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="古井贡" src="//haitao.nos.netease.com/ik6m7awd21_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Hennessy 轩尼诗" src="//haitao.nosdn5.127.net/in1aatfh9_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Dove 德芙" src="//haitao.nosdn3.127.net/igeorxmt69_120_120.jpg">
+							        </a>
+							      
+							      
+							    </div>
+							  </div>
+							  <div class="f-fr imgbox">
+							    <a target="_blank" href="#">
+							      <img class="u-img" src="//haitao.nosdn2.127.net/iqmfaswb6_244_100.jpg">
+							    </a>
+							  </div>
+							</div>
+						</li>
+						<li class="products">
+							<img class="icon" src="../img/productIcon/9.png"/>
+							<span class="t">运动户外</span>
+							<i class="iconfont icon-next"></i>
+							<em class="underline"></em>
+							<div class="m-ctgcard f-cb">
+							  <div class="f-fl m-ctglist">
+							    <div class="m-ctgtbl">
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">运动鞋</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">跑步鞋</a><a target="_blank" class="f-fcred0" href="#">休闲鞋</a><a target="_blank" class="f-fcred0" href="#">篮球鞋</a><a target="_blank" class="f-fcred3" href="#">NIKE</a><a target="_blank" class="f-fcred3" href="#">阿迪达斯</a><a target="_blank" class="f-fcred3" href="#">ASICS</a><a target="_blank" class="f-fcred0" href="#">美津浓</a><a target="_blank" class="f-fcred0" href="#">圣康尼</a><a target="_blank" class="f-fcred0" href="#">SKORA</a><a target="_blank" class="f-fcred0" href="#">Under Armour</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">运动服装</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">运动T恤</a><a target="_blank" class="f-fcred0" href="#">运动卫衣</a><a target="_blank" class="f-fcred0" href="#">运动裤</a><a target="_blank" class="f-fcred0" href="#">更多商品</a><a target="_blank" class="f-fcred0" href="#">NIKE</a><a target="_blank" class="f-fcred3" href="#">阿迪达斯</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">户外鞋靴</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred0" href="#">登山鞋</a><a target="_blank" class="f-fcred3" href="#">徒步鞋</a><a target="_blank" class="f-fcred3" href="#">溯溪鞋</a><a target="_blank" class="f-fcred0" href="#">越野跑鞋</a><a target="_blank" class="f-fcred3" href="#">LOWA</a><a target="_blank" class="f-fcred3" href="#">CRISPI</a><a target="_blank" class="f-fcred3" href="#">Bestard</a><a target="_blank" class="f-fcred3" href="#">Keen</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">户外服装</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred0" href="#">速干T恤</a><a target="_blank" class="f-fcred0" href="#">卫衣衬衣</a><a target="_blank" class="f-fcred0" href="#">皮肤风衣</a><a target="_blank" class="f-fcred0" href="#">冲锋衣裤</a><a target="_blank" class="f-fcred0" href="#">户外裤</a><a target="_blank" class="f-fcred0" href="#"> 功能内衣</a><a target="_blank" class="f-fcred0" href="#">帽子/皮带</a><a target="_blank" class="f-fcred3" href="#">土拨鼠</a><a target="_blank" class="f-fcred3" href="#">巴塔</a><a target="_blank" class="f-fcred0" href="#">棉服</a><a target="_blank" class="f-fcred3" href="#">功能袜</a><a target="_blank" class="f-fcred0" href="#">手套</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">户外装备</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">登山包</a><a target="_blank" class="f-fcred0" href="#">休闲包</a><a target="_blank" class="f-fcred0" href="#">越野跑包</a><a target="_blank" class="f-fcred0" href="#">腰包</a><a target="_blank" class="f-fcred3" href="#">头巾</a><a target="_blank" class="f-fcred0" href="#">水壶</a><a target="_blank" class="f-fcred0" href="#">打火机</a><a target="_blank" class="f-fcred0" href="#">军刀</a><a target="_blank" class="f-fcred0" href="#">露营装备</a><a target="_blank" class="f-fcred3" href="#">佳明</a><a target="_blank" class="f-fcred3" href="#">Osprey</a><a target="_blank" class="f-fcred3" href="#">格里高利</a><a target="_blank" class="f-fcred0" href="#">维氏</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">更多分类</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">汽车机油</a><a target="_blank" class="f-fcred0" href="#">渔具</a><a target="_blank" class="f-fcred3" href="#">壳牌</a><a target="_blank" class="f-fcred0" href="#">嘉实多</a><a target="_blank" class="f-fcred0" href="#">智能穿戴</a><a target="_blank" class="f-fcred3" href="#">速尔跑步机</a><a target="_blank" class="f-fcred3" href="#">游泳</a><a target="_blank" class="f-fcred3" href="#">运动相机</a><a target="_blank" class="f-fcred3" href="#">运动健身</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							    </div>
+							    
+							  </div>
+							  <div class="f-fl m-brandbox">
+							    <div class="brandlist f-cb">
+							        <a target="_blank" href="#">
+							          <img alt="SKECHERS 斯凯奇" src="//haitao.nos.netease.com/iupb76a297_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="NIKE 耐克" src="//haitao.nosdn2.127.net/iedmyq5196.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="adidas 阿迪达斯" src="//haitao.nos.netease.com/ie9wevvj80.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="asics 亚瑟士" src="//haitao.nosdn4.127.net/igbm30kg53_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Marmot 土拨鼠" src="//haitao.nosdn2.127.net/io3ngruj52_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="KEEN" src="//haitao.nosdn3.127.net/iojshlll10_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="patagonia" src="//haitao.nosdn3.127.net/ipc18k4d61_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="Osprey" src="//haitao.nosdn3.127.net/iqdth3z66_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="GREGORY 格里高利" src="//haitao.nosdn2.127.net/iojsenl081_120_120.jpg">
+							        </a>
+							      
+							      
+							    </div>
+							  </div>
+							  <div class="f-fr imgbox">
+							    <a target="_blank" href="#">
+							      <img class="u-img" src="//haitao.nosdn5.127.net/ir73myvy45_244_100.jpg">
+							    </a>
+							  </div>
+							</div>
+						</li>
+						<li class="products">
+							<img class="icon" src="../img/productIcon/10.png"/>
+							<span class="t">水果生鲜</span>
+							<i class="iconfont icon-next"></i>
+							<em class="underline"></em>
+							<div class="m-ctgcard f-cb">
+							  <div class="f-fl m-ctglist">
+							    <div class="m-ctgtbl">
+							      <div class="f-cb">
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">新鲜水果</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred0" href="#">火龙果</a><a target="_blank" class="f-fcred3" href="#">奇异果</a><a target="_blank" class="f-fcred0" href="#">车厘子</a><a target="_blank" class="f-fcred3" href="#">榴莲</a><a target="_blank" class="f-fcred0" href="#">柠檬</a><a target="_blank" class="f-fcred3" href="#">牛油果</a><a target="_blank" class="f-fcred0" href="#">苹果</a><a target="_blank" class="f-fcred0" href="#">橙子</a><a target="_blank" class="f-fcred0" href="#">木瓜</a><a target="_blank" class="f-fcred0" href="#">葡萄</a><a target="_blank" class="f-fcred0" href="#">其他水果</a><a target="_blank" class="f-fcred0" href="#">柚子</a><a target="_blank" class="f-fcred0" href="#">枣</a><a target="_blank" class="f-fcred0" href="#">梨</a><a target="_blank" class="f-fcred3" href="#">山竹</a><a target="_blank" class="f-fcred0" href="#">龙眼</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">肉品禽蛋</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred0" href="#">牛肉</a><a target="_blank" class="f-fcred3" href="#">牛排</a><a target="_blank" class="f-fcred0" href="#">其他肉类</a><a target="_blank" class="f-fcred0" href="#">鸡肉产品</a><a target="_blank" class="f-fcred3" href="#">鸡蛋</a><a target="_blank" class="f-fcred3" href="#">猪肉/腊肠/火腿</a><a target="_blank" class="f-fcred3" href="#">驴肉</a><a target="_blank" class="f-fcred3" href="#">火锅食材</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <!--Regular list-->
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">水产海鲜</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred0" href="#">鱼类/三文鱼</a><a target="_blank" class="f-fcred0" href="#">虾类</a><a target="_blank" class="f-fcred3" href="#">大闸蟹</a><a target="_blank" class="f-fcred0" href="#">其他水产</a><a target="_blank" class="f-fcred3" href="#">海参</a><a target="_blank" class="f-fcred0" href="#">贝类</a><a target="_blank" class="f-fcred0" href="#">螃蟹</a><a target="_blank" class="f-fcred3" href="#">海鲜礼盒</a><a target="_blank" class="f-fcred0" href="#">鱼类制品</a><a target="_blank" class="f-fcred0" href="#">乌贼</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">速冻特产</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred0" href="#">冷冻食品</a><a target="_blank" class="f-fcred3" href="#">冷冻面点</a><a target="_blank" class="f-fcred3" href="#">海鲜制品</a><a target="_blank" class="f-fcred3" href="#">奶制品</a><a target="_blank" class="f-fcred0" href="#">水饺</a><a target="_blank" class="f-fcred0" href="#">蛋糕面包</a><a target="_blank" class="f-fcred0" href="#">冰淇淋</a><a target="_blank" class="f-fcred0" href="#">其他冷冻食品</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							      <div class="f-cb">
+							        <!--Regular list-->
+							        <div class="litd">
+							          <div class="item">
+							             <p class="title"><a target="_blank" class="cat2" href="#">蔬菜食材</a></p>
+							            <div class="ctgnamebox">
+							              <a target="_blank" class="f-fcred3" href="#">蔬菜</a>
+							              
+							            </div>
+							          </div>
+							        </div>
+							        
+							      </div>
+							      
+							    </div>
+							    
+							  </div>
+							  <div class="f-fl m-brandbox">
+							    <div class="brandlist f-cb">
+							        <a target="_blank" href="#">
+							          <img alt="HONGYI 泓易" src="//haitao.nosdn1.127.net/ipxhowz264_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="北极光森鲜" src="//haitao.nos.netease.com/iqd4n86f83_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="当顿庄园" src="//haitao.nosdn3.127.net/ioctym3297_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="海猛生鲜" src="//haitao.nosdn5.127.net/ipp7gnuo67_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="本来生活" src="//haitao.nos.netease.com/iv97f67l18_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="华牧鲜" src="//haitao.nosdn3.127.net/ir6d1kym16_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="百年栗园" src="//haitao.nosdn1.127.net/iprzrtfd16_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="DNUO 顶诺" src="//haitao.nosdn4.127.net/iqc4pln199_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="鲜动生活" src="//haitao.nosdn5.127.net/istp124w96_120_120.jpg">
+							        </a>
+							      
+							        <a target="_blank" href="#">
+							          <img alt="网易味央" src="//haitao.nosdn1.127.net/if3nqciw84_120_120.jpg">
+							        </a>
+							      
+							      
+							    </div>
+							  </div>
+							  <div class="f-fr imgbox">
+							    <a target="_blank" href="#">
+							      <img class="u-img" src="//haitao.nosdn5.127.net/iqtfq73u50_244_100.jpg">
+							    </a>
+							  </div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<ul id="funcTab" class="clearfix">
+					<li class="navitm " >
+						<a class="toplevel" href="#"  target="_blank">首页</a>
+					</li>
+					<li class="navitm" >
+						<a class="toplevel" href="#"  target="_blank">今日限时购</a>
+					</li>
+					<li class="navitm" >
+						<a class="toplevel" href="#"  target="_blank">每日上新</a>
+					</li>
+					<li class="navitm" >
+						<a class="toplevel" href="#" target="_blank">国家馆</a>
+					</li>
+					<li class="navitm" >
+						<a class="toplevel" href="#" target="_blank">全球旗舰</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- 右侧固定功能 -->
+			<div id="rightFunction">
+				<ul class="right">
+					<li>
+						<a class="checkin" href="#">
+							<i class="iconfont icon-qishi"></i>
+							<span class="txt">签到</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="iconfont icon-gouwuche"></i>
+							<span class="txt">购物车</span>
+							<span class="carnum">1</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="iconfont icon-mobile"></i>
+							<span class="txt">APP</span>
+						</a>
+					</li>
+					<li>
+						<a  class="scrolltop" id="returnTop">
+							<i class="iconfont icon-sanjiaoxing-copy-copy"></i>
+							<span class="txt">TOP</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+	<!--大内容区-->
+		<div class="main">
+			<!-- 商品头-->
+			<div class="productmain">
+				<div class="productaddr">
+					<a href="../index.html" class="homepg">网易考拉海购</a>
+					<span class="productname">> SHARP 夏普 智能静音空气净化器家用 KC-BB30-W1</span>
+				</div>
+				<div class="productinfo">
+					<div class="proimgs">
+						<!-- 大图-->
+						<div class="imgdetail">
+							<img class="sharpimg1" src="../img/detail/sharpb1.jpg" alt="SHARP 夏普 智能静音空气净化器家用 KC-BB30-W1">
+							<img class="sharpimg2" src="../img/detail/sharpb2.jpg" alt="SHARP 夏普 智能静音空气净化器家用 KC-BB30-W1">
+							<img class="sharpimg3" src="../img/detail/sharpb3.jpg" alt="SHARP 夏普 智能静音空气净化器家用 KC-BB30-W1">
+							<img class="sharpimg4" src="../img/detail/sharpb4.jpg" alt="SHARP 夏普 智能静音空气净化器家用 KC-BB30-W1">
+							<b class="shadow"></b>
+						</div>
+						<!-- 小图 -->
+						<div class="chooseimg">
+							<ul class="imgul">
+								<li class="imgli1"><a href="#"><img data-guid="1" src="../img/detail/sharpb1.jpg" ></a></li>
+								<li class="imgli1"><a href="#"><img data-guid="2" src="../img/detail/sharpb2.jpg" ></a></li>
+								<li class="imgli1"><a href="#"><img data-guid="3" src="../img/detail/sharpb3.jpg" ></a></li>
+								<li class="imgli1"><a href="#"><img data-guid="4" src="../img/detail/sharpb4.jpg" ></a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- 右侧信息 -->
+						<div class="proprice">
+							<div class="country">
+								<img src="../img/detail/jp.png">
+								<span id="procountry">日本</span>
+								<span class="sep">|</span>
+								<span id="probrand">SHARP 夏普</span>
+							</div>
+							<div id="productit">
+								<h3 id="protit">SHARP 夏普 智能静音空气净化器家用 KC-BB30-W1</h3>
+								<p id="synopsis">夏普经典爆款 卧室客厅通用 高性能升级版! 夏普净离子群专利，独立加湿功能，甲醛CADR 110m3/h 颗粒物 CADR 310m3/h! 对 花粉 甲醛、尘螨、苯、异味、雾霾、PM2.5净化效果非常明显；关爱家人，健康生活！</p>
+							</div>
+							<div class="nowprice">
+								<!--价格详情-->
+								<div class="now">
+									<span class="pridetail">售价</span>
+										<div class="bigprice">
+											<span class="currentprice">￥<span id="enterPrice">1899.00</span></span>
+											<span id="discount">5.5折</span>
+											<span class="marketprice">参考价&nbsp;&nbsp;￥<span id="oldPrice">3500.00</span></span>
+										</div>
+										<div class="getcoupon">
+											<span class="coupons">领券满499减50元<a href="#">点击领取</a></span>
+											<span class="allcoupon">全部<a href="#">2</a>张优惠券></span>
+										</div>
+								</div>
+							</div>
+							<!--详情-->
+							<div class="tax">
+								<span id="leftparticulars">税费</span>
+								<span class="tax1">【本商品包税】<span class="tax2">无需额外交税</span></span>
+							</div>
+							<div class="tax">
+								<span id="leftparticulars">运费</span>
+								<span class="tax1">至 广东/佛山市/禅城区<span class="tax2">满88包邮</span></span>
+							</div>
+							<div class="tax">
+								<span id="leftparticulars">服务</span>
+								<span class="tax2" style="vertical-align: middle;">本商品由&nbsp;&nbsp;自营国内仓&nbsp;&nbsp;发货<p>24:00前完成支付，预计 7月18日(周二) 送达</p></span>
+							</div>
+							<div class="tax">
+								<span id="leftparticulars">数量</span>
+								<button id="minqty">-</button><input type="text" value="1" id="nums"></input><button id="maxqty">+</button>
+								<span class="tax2">库存充足</span>
+							</div>
+							<div class="buybtns">
+								<a href="#" id="buyBtn">立即购买</a>
+								<a href="#" id="addGoods"><i class="iconfont icon-gouwuche"></i>加入购物车</a>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- 商品详情 -->
+		<div class="proparticulars">
+			<div class="look">
+				<div class="looks">
+					<h4>看了又看</h4>
+				</div>
+			</div>
+			<div class="prointroduce">
+				<div class="pronav">
+					<span class="imagedetail active">商品详情<i></i></span>
+					<span class="procom">用户评价</span>
+				</div>
+				<div class="goodsdetail">
+					<div class="promise">
+						<div class="true">真</div>
+						<div class="text">
+							<p>假一赔十</p>
+							<p>网易考拉海购每一件商品都通过严苛的品质把关，保障正品，保障品质。特推出 “假一赔十” 的正品保障政策，杜绝一切假货，让您无忧购物。</p>
+						</div>
+					</div>
+				</div>
+				<div class="proinfoimg">
+					<div class="infoimg">
+						<p><img src="../img/detail/info1.jpg" /></p>
+						<p><img src="../img/detail/info2.jpg" /></p>
+						<p><img src="../img/detail/info3.jpg" /></p>
+						<p><img src="../img/detail/info4.jpg" /></p>
+						<p><img src="../img/detail/info5.jpg" /></p>
+						<p><img src="../img/detail/info6.jpg" /></p>
+						<p><img src="../img/detail/info7.jpg" /></p>
+						<p><img src="../img/detail/info8.jpg" /></p>
+						<p><img src="../img/detail/info9.jpg" /></p>
+						<p><img src="../img/detail/info10.jpg" /></p>
+						<p><img src="../img/detail/info11.jpg" /></p>
+						<p><img src="../img/detail/info12.jpg" /></p>
+						<p><img src="../img/detail/info13.jpg" /></p>
+						<p><img src="../img/detail/info14.jpg" /></p>
+						<p><img src="../img/detail/info15.jpg" /></p>
+						<p><img src="../img/detail/info16.jpg" /></p>
+						<p><img src="../img/detail/info17.jpg" /></p>
+						<p><img src="../img/detail/info18.jpg" /></p>
+						<p><img src="../img/detail/info19.jpg" /></p>
+						<p><img src="../img/detail/info20.jpg" /></p>
+						<p><img src="../img/detail/info21.jpg" /></p>
+						<p><img src="../img/detail/info22.jpg" /></p>
+						<p><img src="../img/detail/info23.jpg" /></p>
+						<p><img src="../img/detail/info24.jpg" /></p>
+						<p><img src="../img/detail/info25.jpg" /></p>
+						<p><img src="../img/detail/info26.jpg" /></p>
+						<p><img src="../img/detail/info27.jpg" /></p>
+						<p><img src="../img/detail/info28.jpg" /></p>
+						<p><img src="../img/detail/info29.jpg" /></p>
+						<p><img src="../img/detail/info30.jpg" /></p>
+						<p><img src="../img/detail/info31.png" /></p>
+						<p><img src="../img/detail/notice.png" /></p>
+						<p><img src="../img/detail/promise.png" /></p>
+						<p><img src="../img/detail/true.jpg" /></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!--footer -->
+		<footer>
+			<!--导航guide-->
+			<div class="footerlist">
+				<div class="boxlist">
+					<div class="boxpromise">
+						<ul>
+							<li>
+								<i class="iconfont icon-zheng"></i>
+								<strong class="tit">200%正品</strong>
+								<span class="desc">正品保障 假一赔十</span>
+							</li>
+							<li>
+								<i class="iconfont icon-zheng"></i>
+								<strong class="tit">低价保障</strong>
+								<span class="desc">缩减中间环节 确保低价</span>
+							</li>
+							<li>
+								<i class="iconfont icon-tui"></i>
+								<strong class="tit">30天无忧退货</strong>
+								<span class="desc">国内退货 售后无忧</span>
+							</li>
+							<li>
+								<i class="iconfont icon-you"></i>
+								<strong class="tit">满88包邮</strong>
+								<span class="desc">部分特殊商品除外</span>
+							</li>
+						</ul>
+					</div>
+					<div class="guidelist">
+						<ul>
+							<li class="first">
+								<a href="#" class="logokaola"></a>
+								<div class="lineus">
+									<span class="lable">关注我们</span>
+
+									<a href="#" class="itm">
+										<em class="icon icon1"></em>
+									</a>
+
+									<a href="#" class="itm">
+										<em class="icon icon2"></em>
+									</a>
+
+									<a href="#" class="itm">
+										<em class="icon icon3"></em>
+									</a>
+								</div>
+							</li>
+							<li>
+								<dl>
+									<dt><em>考拉保障</em></dt>
+									<dd><a target="_blank" href="#" title="假一赔十">假一赔十</a></dd>
+									<dd><a target="_blank" href="#" title="廉正监督">廉正监督</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><em>考拉保障</em></dt>
+									<dd><a target="_blank" href="#" title="假一赔十">假一赔十</a></dd>
+									<dd><a target="_blank" href="#" title="廉正监督">廉正监督</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><em>考拉保障</em></dt>
+									<dd><a target="_blank" href="#" title="假一赔十">假一赔十</a></dd>
+									<dd><a target="_blank" href="#" title="廉正监督">廉正监督</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><em>考拉保障</em></dt>
+									<dd><a target="_blank" href="#" title="假一赔十">假一赔十</a></dd>
+									<dd><a target="_blank" href="#" title="廉正监督">廉正监督</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><em>考拉保障</em></dt>
+									<dd><a target="_blank" href="#" title="假一赔十">假一赔十</a></dd>
+									<dd><a target="_blank" href="#" title="廉正监督">廉正监督</a></dd>
+								</dl>
+							</li>
+							<li class="lastad">
+								<a href="#">
+									<img src="../img/qrcode/footer1.png">
+								</a>
+								<span>考拉联合凤凰知音</span>
+							</li>
+							<li class="lastad">
+								<a href="#">
+									<img src="../img/qrcode/2dcode-app.jpg">
+								</a>
+								<span>扫描下载手机版</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!-- About US -->
+			<div class="aboutus">
+				<div class="aboutus">
+					<a href="#" target="_blank">About NetEase</a>-
+					<a href="#" target="_blank">公司简介</a>-
+					<a href="#" target="_blank">联系方法</a>-
+					<a href="#" target="_blank">友情链接</a>-
+					<a href="#" target="_blank">招聘信息</a>-
+					<a href="#" target="_blank">客户服务</a>-
+					<a href="#" target="_blank">隐私政策</a>-
+					<a href="#" target="_blank">网络营销</a>-
+					<a href="#" target="_blank">网站地图</a>-
+					<a href="#" target="_blank">网易考拉海购</a>
+					<br>
+					<span class="m-license">网络文化经营许可证：浙网文[2016]0155-055号</span>
+					<span class="m-license">增值电信业务经营许可证：浙B2-20090185-3</span>
+					<span class="m-license">出版物经营许可证：新出发浙杭经零字第00136号</span>
+					<span class="m-license"><a href="#" target="_blank">自营经营者信息</a></span>
+					<br>
+					<a target="_blank" href="#" class="m-license m-license-1">
+						<img src="../img/qrcode/footer4.png">
+					</a>
+					<a target="_blank" href="#">
+						<span style="margin-left:5px;">浙公网安备 33010002000066号</span>
+					</a>
+					<span class="m-license">网易公司版权所有©1997-2017</span>
+					<br>
+					<div class="licensepic">
+						<a href="#"><img src="../img/qrcode/footer3.png"></a>
+						<a href="#" ><img src="../img/qrcode/footer4.png" class="licensepic2"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

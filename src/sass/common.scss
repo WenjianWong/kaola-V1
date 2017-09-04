@@ -1,0 +1,594 @@
+/* 头部导航栏 */
+
+#topNav {
+  position: relative;
+  background: #f2f2f2;
+  border-bottom: 1px solid #ededee;
+  color: #666;
+  a {
+    color: #666;
+    &:hover {
+      color: #E31436;
+    }
+  }
+}
+
+#topNavWrap {
+  position: relative;
+  zoom: 1;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  width: 1090px;
+}
+
+#topNavLeft, #topNavLeft2 {
+  float: left;
+}
+
+#topNavLeft {
+  .login {
+    margin-left: 16px;
+  }
+  .sep {
+    padding: 0 10px;
+    color: #ccc;
+  }
+}
+
+#topNav .sep {
+  color: #ccc;
+}
+
+#topNavLeft2 {
+  padding-left: 30px;
+}
+
+#topNav {
+  i.icon-mobile {
+    margin-right: 3px;
+    color: #E31436;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .app .appqrcode {
+    position: absolute;
+    left: 196px;
+    top: 35px;
+    padding: 5px 5px 0;
+    display: none;
+    z-index: 999;
+  }
+}
+
+.appqrcode {
+  background: #fff;
+  text-align: center;
+  color: #333;
+  border: solid 1px #ededee;
+}
+
+#topNavLeft2 {
+  &:hover .appqrcode {
+    display: block;
+  }
+  .app .text {
+    display: block;
+    padding: 4px 0;
+    font-size: 14px;
+    color: #E31436;
+    line-height: 18px;
+    font-weight: normal;
+  }
+}
+
+#topNavRight {
+  float: right;
+  position: relative;
+  right: -3px;
+  .toplevel {
+    padding: 0 14px 0 8px;
+  }
+  li {
+    float: left;
+  }
+  .preCenter {
+    position: relative;
+    zoom: 1;
+  }
+}
+
+.dropMenuBox {
+  position: relative;
+  border: 1px solid transparent;
+  left: -3px;
+  top: -1px;
+}
+
+.topNavHolder {
+  position: relative;
+  zoom: 1;
+  padding: 0 24px 0 16px !important;
+  .arr {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    margin-top: -2px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border-color: #666 transparent transparent;
+    border-style: solid dashed dashed;
+    border-width: 4px 4px 0;
+    -webkit-transition: -webkit-transform .2s ease-in;
+  }
+}
+
+#docHeadWrap {
+  position: relative;
+  zoom: 1;
+  width: 1090px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+#header .logokaola {
+  position: absolute;
+  left: 0;
+  top: 29px;
+  width: 220px;
+  height: 42px;
+  line-height: 45px;
+  outline: none;
+  cursor: pointer;
+  z-index: 9;
+  background: url(../img/logo/logo-s.png) no-repeat;
+}
+
+.searchbox {
+  position: absolute;
+  left: 343px;
+  z-index: 73;
+}
+
+.searchbox1 {
+  top: 24px;
+}
+
+/*顶部固定搜索栏*/
+
+#topFixNav {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 1001;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  &.active {
+    display: block;
+  }
+  .topFixSearch {
+    width: 1090px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .fixNavLogo {
+    margin-top: 11px;
+  }
+}
+
+#topsearchbox1 {
+  position: absolute;
+  left: 31.5%;
+  top: -4px;
+}
+
+#topsearch {
+  width: 510px;
+  height: 36px;
+  padding-left: 1px;
+  background-color: #333;
+  border-radius: 0 3px 3px 0;
+  .wrap {
+    float: left;
+    margin: 2px 1px;
+    padding: 4px 5px 4px 30px;
+    background-color: #fff;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}
+
+#topSearchInput {
+  width: 423px;
+  height: 24px;
+  line-height: 24px;
+  border: 0;
+  font-size: 13px;
+  outline: none;
+}
+
+#topSearchBtn {
+  display: inline-block;
+  height: 36px;
+  width: 50px;
+  font-size: 19px;
+  line-height: 36px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mirror-1, .mirror-2, .guidelist .lineus .icon {
+  background: url(../img/icon1.png) no-repeat;
+}
+
+/* 图片整合专用 可添加class */
+
+.mirror-1 {
+  background-position: -490px -657px;
+}
+
+#topsearch .mirror-2 {
+  position: absolute;
+  left: 10px;
+  top: 11px;
+  width: 14px;
+  height: 14px;
+  background-position: -466px -667px;
+}
+
+#suggestlist {
+  display: block;
+  line-height: 22px;
+  margin-top: 2px;
+  width: 461px;
+  height: 22px;
+  overflow: hidden;
+  li {
+    float: left;
+    white-space: nowrap;
+    .sep {
+      margin: 0 10px;
+      color: #999;
+    }
+    a {
+      color: #999;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.shopingcar {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 24px;
+  width: 108px;
+  height: 34px;
+  background-color: #fff;
+  line-height: 34px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  &:hover {
+    background: #F5F5F5;
+  }
+  .iconfont {
+    font-size: 18px;
+    line-height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #a9a9a9;
+  }
+  .wrap {
+    color: #333333;
+    display: inline-block;
+    padding-left: 6px;
+    background: none;
+    vertical-align: middle;
+  }
+}
+
+#topTabBox {
+  border-bottom: 2px solid #151515;
+  background: #fff;
+}
+
+#topTab {
+  position: relative;
+  zoom: 1;
+  width: 1090px;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+  z-index: 102;
+}
+
+.navitm-cats {
+  cursor: pointer;
+  float: left;
+  height: 40px;
+  width: 160px;
+  background: #151515;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding-left: 0;
+  overflow: visible;
+  .toplevel {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 160px;
+    text-align: left;
+    border-bottom: 2px solid #151515;
+  }
+  .lineicon {
+    display: inline-block;
+    margin: 0 15px 0 27px;
+    width: 15px;
+    height: 12px;
+    overflow: hidden;
+    i {
+      width: 15px;
+      height: 0;
+      border-top: 2px solid #ddd;
+      display: block;
+      margin-bottom: 3px;
+    }
+  }
+  span {
+    font-size: 14px;
+  }
+}
+
+#funcTab {
+  position: relative;
+  z-index: 72;
+  height: 40px;
+  float: left;
+  padding-left: 20px;
+  li {
+    float: left;
+    height: 40px;
+    overflow: hidden;
+    padding: 0 20px;
+    a {
+      display: block;
+      text-align: center;
+      font-size: 15px;
+      font-weight: bold;
+      color: #333;
+      &:hover {
+        color: #E31436;
+      }
+    }
+  }
+}
+
+.allproduct {
+  border-bottom: 1px solid #000;
+  margin-top: -1px;
+}
+
+.navitm-cats {
+  .allproduct {
+    li {
+      height: 40px;
+      background: rgba(15, 15, 15, 0.82);
+      padding-left: 10px;
+      width: 150px;
+      cursor: pointer;
+      text-align: left;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      padding: 0 12px 0 14px;
+    }
+    .t {
+      display: inline-block;
+      vertical-align: middle;
+      width: 70px;
+      height: 30px;
+      line-height: 30px;
+      white-space: nowrap;
+    }
+    .icon-next {
+      display: inline-block;
+      vertical-align: middle;
+      color: #929496;
+      font-size: 19px;
+      width: 16px;
+    }
+    .underline {
+      display: block;
+      position: relative;
+      bottom: 1px;
+      left: 0;
+      width: 140px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    li:hover {
+      background: #555;
+      padding-left: 7px;
+      border-left: 3px solid #e32b42;
+      .m-ctgcard {
+        display: block;
+      }
+    }
+  }
+  .m-ctgcard {
+    transition: height 0.4s;
+    position: absolute;
+    z-index: 75;
+    top: 42px;
+    left: 160px;
+    display: none;
+    width: 930px;
+    overflow: hidden;
+    max-height: 399px;
+    height: 399px;
+    background: #fff;
+    border: 1px solid #333;
+    border-width: 0 1px 1px 0;
+    text-align: left;
+    color: #333;
+    cursor: auto;
+  }
+  .m-ctglist {
+    margin: 10px 20px 20px 20px;
+    width: 610px;
+    max-height: 370px;
+    overflow: hidden;
+  }
+  .m-ctgtbl {
+    width: 100%;
+    font-size: 0;
+    .litd {
+      float: left;
+      width: 50%;
+      vertical-align: top;
+    }
+  }
+  .m-ctglist {
+    .item {
+      display: inline-block;
+      padding: 0;
+      margin: 0 25px 10px 5px;
+      vertical-align: top;
+      width: 275px;
+      height: auto;
+      line-height: normal;
+      overflow: hidden;
+      .title {
+        height: 34px;
+        line-height: 34px;
+        font-size: 14px;
+        font-weight: bold;
+        border-bottom: 1px solid #EAEAEA;
+      }
+    }
+    a.cat2 {
+      display: inline;
+      color: #333;
+      text-align: left;
+    }
+    .ctgnamebox {
+      margin-left: -8px;
+      font-size: 0;
+      .f-fcred3 {
+        color: #E31436;
+      }
+      a {
+        display: inline-block;
+        height: 14px;
+        line-height: 14px;
+        padding: 0 8px 0 10px;
+        margin-top: 12px;
+        border-left: 1px solid #CCC;
+        font-size: 13px;
+        color: #666;
+      }
+    }
+    .item {
+      display: inline-block;
+      padding: 0;
+      margin: 0 25px 10px 5px;
+      vertical-align: top;
+      width: 275px;
+      height: auto;
+      line-height: normal;
+      overflow: hidden;
+      .title {
+        height: 34px;
+        line-height: 34px;
+        font-size: 14px;
+        font-weight: bold;
+        border-bottom: 1px solid #EAEAEA;
+      }
+    }
+    a.cat2 {
+      display: inline;
+      color: #333;
+      text-align: left;
+    }
+    .ctgnamebox {
+      margin-left: -8px;
+      font-size: 0;
+      .f-fcred3 {
+        color: #E31436;
+      }
+      a {
+        display: inline-block;
+        height: 14px;
+        line-height: 14px;
+        padding: 0 8px 0 10px;
+        margin-top: 12px;
+        border-left: 1px solid #CCC;
+        font-size: 13px;
+        color: #666;
+      }
+    }
+  }
+  .m-brandbox {
+    height: 243px;
+    overflow: hidden;
+    width: 245px;
+    padding: 20px 17px 0;
+    background: #f6f6f6;
+  }
+}
+
+/* 卡片DIV样式 */
+
+.f-fl, .fl {
+  float: left;
+}
+
+.navitm-cats .m-ctgcard .imgbox {
+  width: 244px;
+  height: 100px;
+  padding: 18px;
+  background: #f6f6f6;
+}
+
+.f-fr, .fr {
+  float: right;
+}
+
+.navitm-cats .m-brandbox .brandlist {
+  a {
+    float: left;
+    padding: 0;
+  }
+  img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #EAEAEA;
+    margin: -1px 0 0 -1px;
+  }
+}
+
+.f-cb {
+  &:nth-of-type(2) {
+    width: 609px;
+  }
+  height: 123px;
+}
+
+.m-ctgtbl a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,64 @@
+.allproduct{display: none;}
+.main{width: 1090px;font-size: 14px;padding: 10px 0 0;margin: auto;overflow: hidden;height: 610px;}
+.productmain{padding:12px 0 17px 0;border-bottom: 1px solid #ddd;font-size: 13px;color: #999;height: 22px;line-height: 22px;margin-bottom: 40px;}
+.productaddr a{color: #333;}
+.productaddr a:hover{text-decoration: underline;}
+.productinfo{padding-top:50px;overflow: hidden;}
+.productinfo .proimgs{float: left;width: 402px;height: 488px;}
+.productinfo .imgdetail{position:relative;margin-bottom: 10px;top:0;left: 0;border:1px solid #eee;width: 400px;height: 400px;overflow: hidden;cursor: crosshair;}
+.productinfo .imgdetail .sharpimg1{position: absolute;top: 0;left: 0;}
+.productinfo .imgdetail .sharpimg2{position: absolute;top: 0;left: 0;display: none;}
+.productinfo .imgdetail .sharpimg3{position: absolute;top: 0;left: 0;display: none;}
+.productinfo .imgdetail .sharpimg4{position: absolute;top: 0;left: 0;display: none;}
+.productinfo .shadow{background: black;opacity: 0.3;width: 200px;height: 200px;position: absolute;top: 0;left: 0;display: none;}
+.productinfo .chooseimg{width: 344px;overflow: hidden;margin: auto;}
+.chooseimg .imgli1{padding:2px;width: 70px;height: 70px;overflow: hidden;float: left;margin-right: 10px;border: 1px solid #eee;}
+.chooseimg .imgli1 img{width: 100%;height: 100%;}
+.chooseimg .imgli1:hover{border:3px solid #E31436;padding: 0}
+.proprice{float: left;width: 658px;margin-left: 30px;font-size: 12px;}
+.proprice img{width: 24px;height: 24px;}
+.proprice span{font-size: 13px;margin-left: 6px;color: #999;font-weight: 400;vertical-align: middle;}
+#protit{margin:10px 0 5px 0;font-weight: bold;font-size: 18px;line-height: 26px;color: #333;word-wrap: break-word;}
+#synopsis{margin-bottom: 12px;font-size: 13px;color: #333;line-height: 20px;}
+.nowprice{margin-bottom: 12px;background: #f9f9f9;border-bottom: 1px dotted #ddd;padding-bottom: 4px;}
+.nowprice .now{overflow:hidden;padding-top: 5px;border-top: 1px dotted #ddd;}
+.nowprice .now .pridetail{display:inline-block;width:75px;color:#666;float: left;line-height: 26px;margin: 8px 0 8px 10px;vertical-align: 4px;}
+.bigprice{margin-left:71px;}
+.bigprice .currentprice{display: inline-block;font-size: 26px;color: #e31436;font-weight: bold;vertical-align: baseline;line-height: 1;margin: 8px 0;}
+.bigprice #enterPrice{display: inline-block;font-size: 26px;color: #e31436;font-weight: bold;vertical-align: baseline;line-height: 1;}
+.bigprice #discount{display: inline-block;margin-left: 6px;background: #F68587;color: #fff;padding: 0 5px;border-radius: 2px;line-height: 18px;height: 18px;vertical-align: 4px;}
+.bigprice .marketprice{color:#999;margin:0 0 8px 14px;vertical-align: 4px;}
+.bigprice #oldPrice{color:#999;vertical-align: 0px;margin-left: -2px;}
+.nowprice .getcoupon{margin-left: 85px;padding-bottom: 6px;}
+.getcoupon .coupons{color: #333;font-size: 12px;height: 18px;line-height: 18px;vertical-align: middle;}
+.getcoupon .coupons a{text-decoration: underline;color: #51B8F1;margin-left: 6px;}
+.getcoupon .allcoupon{float: right;padding-right: 10px;color: #333;}
+.getcoupon .allcoupon a{color: #e31436}
+#leftparticulars{display:inline-block;width:75px;color:#666;line-height: 26px;margin-left:10px;vertical-align: middle;font-size: 12px;}
+.tax .tax1{color: #E31436;}
+.tax .tax2{color: #333;font-size: 12px;vertical-align: 0;}
+.tax .tax2 p{margin-left: 96px;}
+#minqty,#maxqty{width: 22px;height: 22px;background: #F3F3F3;border: 1px solid #ccc;}
+#nums{width: 48px;height: 22px;text-align: center;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;box-sizing:border-box;}
+.buybtns{margin-top:35px;}
+#buyBtn{width: 156px;height: 46px;border: 2px solid #D41C44;background-color: #FFECED;color: #D31B44;line-height: 46px;}
+.buybtns a{display: inline-block;margin-right: 20px;text-align: center;font-size: 18px;font-weight: bold;text-decoration: none;vertical-align: middle;}
+#addGoods{width: 180px;height: 50px;line-height: 50px;color: #FFF;background-color: #E31436;}
+#addGoods .iconfont{font-size: 20px;margin-right: 5px;}
+.proparticulars{width: 1090px;margin:0 auto;clear: both;min-height:600px;overflow: hidden;}
+.proparticulars .look{width:180px;float: left;margin-right: 20px;}
+.proparticulars .look .looks{border: 1px solid #eaeaea;height: 900px;}
+.looks h4{font-size: 16px;font-weight: bold;padding: 8px 10px;border-bottom: 1px solid #eaeaea;}
+.prointroduce{width:890px;float: right;position: relative;}
+.prointroduce .pronav{width: 888px;height: 48px;border:1px solid #eaeaea;background: #f8f8f8;position:absolute;top: 0;}
+.pronav .active{background: #fff;color: #D41C44;font-weight: bold;}
+.prointroduce .imagedetail,.procom{display: inline-block;position: relative;border-right: 1px solid #eaeaea;width:160px;text-align: center;height: 48px;line-height: 48px;font-size: 16px;cursor: pointer;}
+.prointroduce .pronav i{border-top: 4px solid #d41c44;width: 100%;position: absolute;top: -1px;left: 0;height: 45px;line-height: 45px;border-bottom: 1px solid #fff;}
+.prointroduce .pronav.active{color: #d41c44;background: #fff;font-weight: bold;}
+.goodsdetail{border:1px solid #eaeaea;}
+.goodsdetail .promise{padding: 15px 20px;border-top: 1px solid #eaeaea;overflow: hidden;border-top-width: 0;}
+.promise .true{float: left;width: 40px;height: 40px;background: #e31436;border-radius: 50%;font-size: 24px;color: #fff;margin-right: 16px;text-align: center;line-height: 40px;}
+.text p:nth-of-type(1){font-weight: bold;font-size: 16px;color: #333;}
+.text p:nth-of-type(2){font-size: 13px;color: #333;line-height: 18px;}
+.proinfoimg{border:1px solid #eaeaea;border-top-width: 0}
+.proinfoimg .infoimg{width:710px;margin:0 auto;}
