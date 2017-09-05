@@ -1,0 +1,47 @@
+.container{background: #F3F3F3;}
+.mainwrap{width: 1090px;min-height: 1000px;font-size: 14px;margin:0 auto;position: relative;padding:10px 0 0;}
+.mainwrap .goodstrack{height:66px;}
+.mainwrap .goodstrack .wrap{height: 22px;line-height: 22px;padding: 12px 0 17px 0;border-bottom: 1px solid #ddd;font-size: 13px;color:#999;margin-bottom: 40px;}
+.mainwrap .goodstrack .wrap a{color:#333;}
+.mainwrap .goodstrack .wrap a:hover{text-decoration: underline;}
+.goodsinfo{margin-top: 20px;position: relative;z-index: 1;overflow: hidden;}
+.zoombox{width: 402px;height: 488px;position: relative;display: inline;z-index: 1000;float: left;}
+.zoombox .picprev,.zoombox .picnext{position: absolute;top:421px;color:#ddd;display: inline-block;z-index: 1000;width:33px;height: 62px;padding: 1px 0;border: 1px solid #eee;font-size: 38px;line-height: 62px;text-align: center;background: #fff;}
+.zoombox .picprev{left: 0;}
+.zoombox .picnext{right: 0;}
+.zoombox .littleimg{position: absolute;height: 70px;overflow: hidden;top: 419px;left:35px;width: 330px;}
+.zoombox .littleimg .littleimgul{position: absolute;left: 0;min-width: 560px;padding-left: 10px;z-index: 2;}
+.littleimgul .littleimgli{width:70px;height: 70px;overflow: hidden;float: left;margin-right: 10px;}
+.littleimgul .littleimgli a{display: inline-block;overflow: hidden;height: 64px;width:64px;border:1px solid #eee;margin: 2px;}
+.littleimgul .littleimgli a.active{border:3px solid #E31436;margin: 0}
+.littleimgul .littleimgli a img{width: 64px;display: inline-block;vertical-align: middle;}
+.imgzoom{position: relative;top: 0;left: 0;border: 1px solid #eee;width: 400px;height: 400px;overflow: hidden;cursor: crosshair;}
+.imgzoom img{width: 400px;height: 400px;}
+.imgzoom b{display: none;width:200px;height: 200px;position: absolute;opacity: 0.3;background: black;top:0;left: 0}
+.detailimg{width: 400px;height: 400px;position: absolute;top:0;left: 430px;overflow: hidden;border:1px solid #ededed;display: none;}
+.detailimg img{width: 800px;height: 800px;position: absolute;}
+.product_info{position: relative;float: left;width: 658px;min-height:600px;margin-left: 30px;font-size: 12px;background: rgba(0,0,0,0.1);}
+.product_info .country{color: #333;word-wrap: break-word;}
+.product_info .country img{width:24px;height: 24px;}
+.product_info .country span{font-size: 13px;color: #999;font-weight: 400;margin-left: 6px;vertical-align: middle;}
+.product_info .country .split{font-size: 12px;}
+.product_info .country a{color: #999;}
+.product_info .country a:hover{text-decoration: underline;}
+.product_title{margin:10px 0 5px 0;font-weight: 600;font-size: 18px;line-height: 26px;}
+.product_desc{margin-bottom: 11px;color: #333;line-height: 20px;font-size: 13px;}
+.product_price{margin-bottom: 12px;border-bottom: 1px solid #ddd;padding-bottom: 4px;background-color: #f9f9f9;}
+.product_price .price{overflow:hidden;position: relative;padding-top: 5px;border-top: 1px solid #ddd;}
+.product_price .price .shoujia{font-size: 12px;float: left;line-height: 26px;margin: 8px 0 8px 10px;vertical-align: 4px;display: inline-block;width: 75px;color: #666;}
+.product_price .price .nowprice{font-size: 26px;color:#e13436;font-weight: bold;line-height:42px;margin: 8px 0;}
+.product_price .price .nowprice::before{
+	content: '￥';
+}
+.product_price .price .discount{display: inline-block;margin-left: 5px;background: #f68587;height: 18px;padding: 0 5px;color: #fff;border-radius: 2px;vertical-align: 5px;}
+.product_price .price .rp{display: inline-block;vertical-align: 5px;color:#999;margin:0 0 8px 14px;}
+
+
+
+
+
+
+
