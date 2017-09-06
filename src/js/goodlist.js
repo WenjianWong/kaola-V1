@@ -52,12 +52,12 @@ require(['config'],function(){
 
 				//计算折扣
 				var discount = ((item.nowPrice / item.oldPrice)*10).toFixed(1);
-
+		
 					return`
-						<li class="goodsli">
+						<li class="goodsli" data-id="${item.id}">
 							<div class="goodswrap">
 								<div class="goodsimg">
-									<a href="#">
+									<a href="#" target="_blank">
 										<img src="${item.productImg}">
 									</a>
 								</div>
@@ -67,7 +67,7 @@ require(['config'],function(){
 										<span class="price">${item.nowPrice}</span>
 										<span class="discount">${discount}折</span><del class="oldprice"><i>￥</i>${item.oldPrice}</del>
 									</p>
-									<p class="goodsname"><a href="#">${item.productName}</a></p>
+									<p class="goodsname"><a href="#" target="_blank">${item.productName}</a></p>
 									<p class="save">立省${item.oldPrice - item.nowPrice}元</p>
 									<p class="commet"><span>评论：${item.commet}</span><b>${item.areaOfsource}</b>
 									<p class="distribution">${item.distribution}</p>
@@ -114,7 +114,6 @@ require(['config'],function(){
 				return			
 			}
 			requestData(pageNo);
-			console.log(pageNo)
 			
 			for(var i=0;i<$pages;i++){
 				$('.pageno').find('a').eq(i).removeClass('active');
@@ -132,13 +131,36 @@ require(['config'],function(){
 				return
 			}
 			requestData(pageNo);
-			console.log(pageNo)
+
 			for(var i=0;i<$pages;i++){
 				$('.pageno').find('a').eq(i).removeClass('active');
 			};
 			$('.pageno').find('a').eq(pageNo-1).addClass('active');
 		})
 
+		//点击商品获取id
+		$goodsul.on('click','li',function(e){
+			e.preventDefault();
+			var goodsid = $(this).attr('data-id');
+			console.log(goodsid)
+
+			var url = '../html/details.html?id=';
+
+			url = url+goodsid;
+			
+			//location.href不能新窗口打开 但window.open容易被浏览器屏蔽
+			// location.href = url;
+			window.open(url,'_blank');
+
+			// $.ajax({
+			// 	data:{data_id:goodsid},
+			// 	url:'../api/details.php',
+			// 	success:res=>{
+			// 		var goodsdata = JSON.parse(res);
+			// 		console.log(goodsdata)
+			// 	}
+			// });
+		})
 
 
 	});/*require jq结尾*/
